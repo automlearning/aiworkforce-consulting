@@ -60,6 +60,23 @@
 
     <!-- Chatbot Widget -->
     <link rel="stylesheet" href="chatbot.css">
+
+    <style>
+        /* Services in one row */
+        .section-services .services-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: 1100px) {
+            .section-services .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .section-services .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -86,7 +103,7 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <h1 class="hero-title">Applied AI orchestration for modern businesses.</h1>
-                <p class="hero-subtitle">Practical AI automations for small and mid-sized businesses—built to ship and deliver ROI.</p>
+                <p class="hero-subtitle">15+ years helping Banking & Fintech businesses manage their customer lifecycle. Practical AI automations built to ship and deliver ROI.</p>
                 <a href="contact.html" class="btn btn-primary">Book a Call</a>
                 <a href="client-intake.html" class="btn btn-secondary">Start a Project Brief</a>
             </div>
