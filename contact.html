@@ -86,7 +86,10 @@
                     <!-- Contact Form (shown if no booking URL) -->
                     <div class="contact-form-section" data-hide-if="{{BOOKING_URL}}">
                         <h2>Send a message</h2>
-                        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                        <form class="contact-form" action="https://formsubmit.co/samuel@aiworkforce.au" method="POST">
+                            <input type="hidden" name="_subject" value="New contact from AIWorkforce website">
+                            <input type="hidden" name="_next" value="https://www.aiworkforce.consulting/contact.html?success=true">
+                            <input type="hidden" name="_captcha" value="false">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" required>
