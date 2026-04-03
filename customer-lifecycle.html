@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Lifecycle Management | AI Workforce Consulting</title>
+    <link rel="stylesheet" href="css/themes/default.css" id="theme-css">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .lifecycle-hero {
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .lifecycle-hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .lifecycle-hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--color-text-muted);
+        }
+
+        .lifecycle-container {
+            padding: 2rem 0 4rem;
+        }
+
+        .lifecycle-chart {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            aspect-ratio: 1;
+        }
+
+        .lifecycle-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 1rem;
+            z-index: 10;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .lifecycle-stage {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: var(--color-surface);
+            border: 3px solid var(--color-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .lifecycle-stage:hover,
+        .lifecycle-stage.active {
+            transform: scale(1.1);
+            border-color: var(--color-primary);
+            background: var(--color-primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .lifecycle-stage.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-primary);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        /* Position stages in a circle */
+        .stage-1 { top: 5%; left: 50%; transform: translateX(-50%); }
+        .stage-2 { top: 20%; right: 10%; }
+        .stage-3 { top: 55%; right: 5%; }
+        .stage-4 { bottom: 5%; left: 50%; transform: translateX(-50%); }
+        .stage-5 { top: 55%; left: 5%; }
+        .stage-6 { top: 20%; left: 10%; }
+
+        .stage-1:hover, .stage-1.active { transform: translateX(-50%) scale(1.1); }
+        .stage-4:hover, .stage-4.active { transform: translateX(-50%) scale(1.1); }
+
+        /* Connection lines */
+        .lifecycle-connections {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: 2px dashed var(--color-border);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Stage Details Panel */
+        .stage-details {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .stage-details.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stage-details h2 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stage-details h2 .stage-number {
+            background: var(--color-primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .stage-details .description {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-item {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .service-item:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .service-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .service-item p {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .metrics-row {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border);
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Instructions */
+        .instructions {
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .lifecycle-chart {
+                max-width: 350px;
+            }
+
+            .lifecycle-stage {
+                width: 70px;
+                height: 70px;
+                font-size: 0.65rem;
+            }
+
+            .lifecycle-center {
+                width: 90px;
+                height: 90px;
+                font-size: 0.7rem;
+            }
+
+            .stage-2 { right: 0; }
+            .stage-3 { right: -5%; }
+            .stage-5 { left: -5%; }
+            .stage-6 { left: 0; }
+        }
+
+        /* Linear view for very small screens */
+        @media (max-width: 500px) {
+            .lifecycle-chart {
+                display: none;
+            }
+
+            .lifecycle-linear {
+                display: block !important;
+            }
+        }
+
+        .lifecycle-linear {
+            display: none;
+        }
+
+        .linear-stage {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .linear-stage:hover,
+        .linear-stage.active {
+            border-color: var(--color-primary);
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .linear-stage .number {
+            width: 36px;
+            height: 36px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .linear-stage.active .number {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .linear-connector {
+            width: 2px;
+            height: 20px;
+            background: var(--color-border);
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Samuel Kambasha</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="customer-lifecycle.html" class="active">Lifecycle</a></li>
+                <li><a href="showcase/">Our Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="lifecycle-hero">
+        <div class="container">
+            <h1>Customer Lifecycle Management</h1>
+            <p>An interactive view of the customer journey stages and the AI-powered services that drive value at each touchpoint.</p>
+        </div>
+    </header>
+
+    <!-- Lifecycle Chart -->
+    <section class="lifecycle-container">
+        <div class="container">
+            <p class="instructions">Click on any stage to explore services and key metrics</p>
+
+            <!-- Circular Chart (desktop) -->
+            <div class="lifecycle-chart">
+                <div class="lifecycle-connections"></div>
+                <div class="lifecycle-center">Customer<br>Lifecycle</div>
+
+                <div class="lifecycle-stage stage-1" data-stage="1">
+                    Awareness
+                </div>
+                <div class="lifecycle-stage stage-2" data-stage="2">
+                    Acquisition
+                </div>
+                <div class="lifecycle-stage stage-3" data-stage="3">
+                    Activation
+                </div>
+                <div class="lifecycle-stage stage-4" data-stage="4">
+                    Engagement
+                </div>
+                <div class="lifecycle-stage stage-5" data-stage="5">
+                    Retention
+                </div>
+                <div class="lifecycle-stage stage-6" data-stage="6">
+                    Advocacy
+                </div>
+            </div>
+
+            <!-- Linear View (mobile) -->
+            <div class="lifecycle-linear">
+                <div class="linear-stage" data-stage="1">
+                    <span class="number">1</span>
+                    <span>Awareness</span>
+                </div>
+                <div class="linear-connector"></div>
+                <div class="linear-stage" data-stage="2">
+                    <span class="number">2</span>
+                    <span>Acquisition</span>
+                </div>
+                <div class="linear-connector"></div>
+                <div class="linear-stage" data-stage="3">
+                    <span class="number">3</span>
+                    <span>Activation</span>
+                </div>
+                <div class="linear-connector"></div>
+                <div class="linear-stage" data-stage="4">
+                    <span class="number">4</span>
+                    <span>Engagement</span>
+                </div>
+                <div class="linear-connector"></div>
+                <div class="linear-stage" data-stage="5">
+                    <span class="number">5</span>
+                    <span>Retention</span>
+                </div>
+                <div class="linear-connector"></div>
+                <div class="linear-stage" data-stage="6">
+                    <span class="number">6</span>
+                    <span>Advocacy</span>
+                </div>
+            </div>
+
+            <!-- Stage Details Panel -->
+            <div class="stage-details" id="stageDetails">
+                <h2><span class="stage-number">1</span> <span id="stageName">Awareness</span></h2>
+                <p class="description" id="stageDescription">Building brand recognition and attracting potential customers through targeted outreach.</p>
+
+                <h3 style="margin-bottom: 1rem;">Services & Solutions</h3>
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Services populated by JS -->
+                </div>
+
+                <div class="metrics-row" id="metricsRow">
+                    <!-- Metrics populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Samuel Kambasha</span>
+                    <p>AI orchestration and automation design for Fintech, Banking, and professional services.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="services.html">Services</a>
+                    <a href="showcase/">Our Work</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Samuel Kambasha. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const stageData = {
+            1: {
+                name: "Awareness",
+                description: "Building brand recognition and attracting potential customers through targeted outreach and AI-driven marketing intelligence.",
+                services: [
+                    { title: "AI-Powered Lead Scoring", desc: "Predictive models to identify high-value prospects" },
+                    { title: "Content Personalization", desc: "Dynamic content targeting based on customer segments" },
+                    { title: "Market Analytics", desc: "Competitive intelligence and market opportunity analysis" },
+                    { title: "Digital Campaign Optimization", desc: "ML-driven A/B testing and channel optimization" }
+                ],
+                metrics: [
+                    { value: "3.2x", label: "Lead Quality Improvement" },
+                    { value: "45%", label: "Cost Per Acquisition Reduction" },
+                    { value: "78%", label: "Target Audience Reach" }
+                ]
+            },
+            2: {
+                name: "Acquisition",
+                description: "Streamlining customer onboarding with intelligent automation and frictionless digital experiences.",
+                services: [
+                    { title: "Digital Onboarding Automation", desc: "End-to-end automated KYC/AML workflows" },
+                    { title: "Document Processing", desc: "AI extraction and validation of customer documents" },
+                    { title: "Risk Assessment Models", desc: "Real-time credit and fraud risk evaluation" },
+                    { title: "Conversational AI", desc: "24/7 chatbot support for application assistance" }
+                ],
+                metrics: [
+                    { value: "70%", label: "Onboarding Time Reduction" },
+                    { value: "95%", label: "Document Accuracy" },
+                    { value: "4.5x", label: "Application Throughput" }
+                ]
+            },
+            3: {
+                name: "Activation",
+                description: "Ensuring new customers quickly realize value through guided experiences and proactive engagement.",
+                services: [
+                    { title: "Personalized Onboarding Journeys", desc: "Tailored activation paths based on customer profile" },
+                    { title: "Smart Notifications", desc: "AI-timed prompts to drive first transactions" },
+                    { title: "Product Recommendations", desc: "Next-best-action suggestions for new users" },
+                    { title: "Success Milestone Tracking", desc: "Automated monitoring of activation KPIs" }
+                ],
+                metrics: [
+                    { value: "85%", label: "First Transaction Rate" },
+                    { value: "12 days", label: "Time to First Value" },
+                    { value: "40%", label: "Feature Adoption Increase" }
+                ]
+            },
+            4: {
+                name: "Engagement",
+                description: "Deepening customer relationships through personalized interactions and proactive value delivery.",
+                services: [
+                    { title: "Behavioral Analytics", desc: "Deep insights into customer usage patterns" },
+                    { title: "Cross-sell/Upsell Intelligence", desc: "AI-driven product recommendations" },
+                    { title: "Omnichannel Orchestration", desc: "Unified experience across all touchpoints" },
+                    { title: "Predictive Servicing", desc: "Anticipate needs before customers ask" }
+                ],
+                metrics: [
+                    { value: "2.8x", label: "Products Per Customer" },
+                    { value: "65%", label: "Engagement Score Increase" },
+                    { value: "35%", label: "Revenue Per Customer" }
+                ]
+            },
+            5: {
+                name: "Retention",
+                description: "Proactively identifying and addressing churn risks to maximize customer lifetime value.",
+                services: [
+                    { title: "Churn Prediction Models", desc: "Early warning system for at-risk customers" },
+                    { title: "Retention Campaigns", desc: "Automated personalized win-back strategies" },
+                    { title: "Customer Health Scoring", desc: "Real-time relationship health monitoring" },
+                    { title: "Proactive Issue Resolution", desc: "AI-detected problems resolved before escalation" }
+                ],
+                metrics: [
+                    { value: "25%", label: "Churn Reduction" },
+                    { value: "3.5x", label: "Customer Lifetime Value" },
+                    { value: "92%", label: "Retention Rate" }
+                ]
+            },
+            6: {
+                name: "Advocacy",
+                description: "Transforming satisfied customers into brand advocates who drive organic growth.",
+                services: [
+                    { title: "NPS & Sentiment Analysis", desc: "Real-time customer satisfaction tracking" },
+                    { title: "Referral Program Optimization", desc: "AI-powered incentive personalization" },
+                    { title: "Review & Testimonial Mining", desc: "Automated collection and analysis of feedback" },
+                    { title: "Community Engagement", desc: "Identify and nurture brand champions" }
+                ],
+                metrics: [
+                    { value: "+45", label: "Net Promoter Score" },
+                    { value: "30%", label: "Referral-Driven Growth" },
+                    { value: "4.8/5", label: "Customer Satisfaction" }
+                ]
+            }
+        };
+
+        function showStageDetails(stageNum) {
+            const data = stageData[stageNum];
+            const details = document.getElementById('stageDetails');
+
+            // Update content
+            document.querySelector('.stage-number').textContent = stageNum;
+            document.getElementById('stageName').textContent = data.name;
+            document.getElementById('stageDescription').textContent = data.description;
+
+            // Update services
+            const servicesGrid = document.getElementById('servicesGrid');
+            servicesGrid.innerHTML = data.services.map(s => `
+                <div class="service-item">
+                    <h4>${s.title}</h4>
+                    <p>${s.desc}</p>
+                </div>
+            `).join('');
+
+            // Update metrics
+            const metricsRow = document.getElementById('metricsRow');
+            metricsRow.innerHTML = data.metrics.map(m => `
+                <div class="metric">
+                    <div class="metric-value">${m.value}</div>
+                    <div class="metric-label">${m.label}</div>
+                </div>
+            `).join('');
+
+            // Show panel
+            details.classList.add('visible');
+
+            // Update active states
+            document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(el => {
+                el.classList.remove('active');
+                if (el.dataset.stage === String(stageNum)) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        // Event listeners
+        document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(stage => {
+            stage.addEventListener('click', () => {
+                showStageDetails(parseInt(stage.dataset.stage));
+            });
+        });
+
+        // Show first stage by default
+        showStageDetails(1);
+    </script>
+</body>
+</html>
