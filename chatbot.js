@@ -100,6 +100,9 @@
         // Bold: **text**
         html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
+        // Convert URLs to clickable links
+        html = html.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+
         // Convert inline numbered lists to proper newlines (e.g., "text 1. item 2. item" -> "text\n1. item\n2. item")
         html = html.replace(/\s+(\d+)\.\s+/g, '\n$1. ');
 
