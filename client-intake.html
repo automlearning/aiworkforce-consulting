@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Project Brief - Tell us about your website project so we can bring your vision to life.">
+    <title>Website Project Brief | Samuel Kambasha</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/themes/default.css" id="theme-css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <style>
+        /* Intake Form Specific Styles */
+        .intake-header {
+            background: var(--page-header-bg);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .intake-header h1 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .intake-header p {
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .intake-form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .form-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-section h2 {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 2px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .section-number {
+            background: var(--color-primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: var(--space-xs);
+            color: var(--color-text);
+        }
+
+        .form-group .label-hint {
+            font-weight: 400;
+            color: var(--color-text-light);
+            font-size: 0.875rem;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="url"],
+        .form-group input[type="tel"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--input-border);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            background: var(--input-bg);
+            color: var(--input-color);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-primary-light);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-weight: 400;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background var(--transition-fast);
+        }
+
+        .checkbox-group label:hover {
+            background: var(--color-background-alt);
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--color-primary);
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: 10px 16px;
+            border: 1px solid var(--input-border);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 400;
+            transition: all var(--transition-fast);
+        }
+
+        .radio-group label:hover {
+            border-color: var(--color-primary);
+        }
+
+        .radio-group input[type="radio"]:checked + span {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+
+        .radio-group input[type="radio"] {
+            accent-color: var(--color-primary);
+        }
+
+        .link-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .link-input-group input {
+            margin-bottom: 0;
+        }
+
+        .add-link-btn {
+            align-self: flex-start;
+            background: none;
+            border: 1px dashed var(--color-primary);
+            color: var(--color-primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all var(--transition-fast);
+        }
+
+        .add-link-btn:hover {
+            background: var(--color-primary-light);
+        }
+
+        .help-text {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            margin-top: var(--space-xs);
+        }
+
+        .file-upload-info {
+            background: var(--color-background-alt);
+            border: 1px dashed var(--color-border);
+            border-radius: 6px;
+            padding: var(--space-md);
+            text-align: center;
+        }
+
+        .file-upload-info p {
+            margin: 0;
+            color: var(--color-text-light);
+        }
+
+        .file-upload-info a {
+            color: var(--color-primary);
+        }
+
+        .submit-section {
+            text-align: center;
+            padding: var(--space-lg) 0;
+        }
+
+        .submit-section .btn {
+            padding: 16px 48px;
+            font-size: 1.125rem;
+        }
+
+        .submit-section p {
+            margin-top: var(--space-md);
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--color-primary);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .intake-nav {
+            position: sticky;
+            top: 0;
+            background: var(--color-background);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--space-sm) 0;
+            z-index: 100;
+        }
+
+        .intake-nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .intake-nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .intake-nav a:hover {
+            color: var(--color-primary);
+        }
+
+        .section-links {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .section-links a {
+            opacity: 0.6;
+        }
+
+        .section-links a.active {
+            opacity: 1;
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Sticky Navigation -->
+    <nav class="intake-nav">
+        <div class="intake-nav-inner">
+            <a href="index.html">Samuel Kambasha</a>
+            <div class="section-links">
+                <a href="#basics">Basics</a>
+                <a href="#goals">Goals</a>
+                <a href="#design">Design</a>
+                <a href="#content">Content</a>
+                <a href="#technical">Technical</a>
+                <a href="#competitors">Competitors</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intake-header">
+        <div class="container">
+            <h1>Website Project Brief</h1>
+            <p>Help us understand your vision. The more detail you provide, the better we can bring your website to life.</p>
+        </div>
+    </header>
+
+    <!-- Intake Form -->
+    <form class="intake-form" action="https://formsubmit.co/samuel@aiworkforce.au" method="POST">
+        <input type="hidden" name="_subject" value="New Website Project Brief Submission">
+        <input type="hidden" name="_next" value="https://www.aiworkforce.consulting/client-intake.html?success=true">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Section 1: Business Overview -->
+        <section class="form-section" id="basics">
+            <h2><span class="section-number">1</span> Business Overview</h2>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="business_name">Business Name *</label>
+                    <input type="text" id="business_name" name="business_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact_name">Your Name *</label>
+                    <input type="text" id="contact_name" name="contact_name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="industry">Industry / Niche *</label>
+                <input type="text" id="industry" name="industry" required placeholder="e.g., Healthcare, E-commerce, Professional Services">
+            </div>
+
+            <div class="form-group">
+                <label for="business_description">
+                    What does your business do?
+                    <span class="label-hint">Describe your products/services and the problem you solve for customers</span>
+                </label>
+                <textarea id="business_description" name="business_description" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="target_audience">
+                    Who is your target audience?
+                    <span class="label-hint">Age range, location, interests, profession, etc.</span>
+                </label>
+                <textarea id="target_audience" name="target_audience" rows="3"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 2: Website Goals -->
+        <section class="form-section" id="goals">
+            <h2><span class="section-number">2</span> Website Goals</h2>
+
+            <div class="form-group">
+                <label>What is the primary purpose of your website? *</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="purpose[]" value="Sell products online"> Sell products online (E-commerce)</label>
+                    <label><input type="checkbox" name="purpose[]" value="Generate leads"> Generate leads / inquiries</label>
+                    <label><input type="checkbox" name="purpose[]" value="Showcase portfolio"> Showcase portfolio / work</label>
+                    <label><input type="checkbox" name="purpose[]" value="Provide information"> Provide information about services</label>
+                    <label><input type="checkbox" name="purpose[]" value="Accept bookings"> Accept bookings / appointments</label>
+                    <label><input type="checkbox" name="purpose[]" value="Build community"> Build community / membership</label>
+                    <label><input type="checkbox" name="purpose[]" value="Blog/Content"> Blog / Content publishing</label>
+                    <label><input type="checkbox" name="purpose[]" value="Other"> Other (please specify below)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="primary_action">
+                    What's the #1 action you want visitors to take?
+                    <span class="label-hint">e.g., "Call us", "Book a consultation", "Buy a product", "Subscribe to newsletter"</span>
+                </label>
+                <input type="text" id="primary_action" name="primary_action">
+            </div>
+
+            <div class="form-group">
+                <label>What features do you need?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features[]" value="Contact form"> Contact form</label>
+                    <label><input type="checkbox" name="features[]" value="Online booking system"> Online booking / scheduling system</label>
+                    <label><input type="checkbox" name="features[]" value="E-commerce/Shop"> E-commerce / Online shop</label>
+                    <label><input type="checkbox" name="features[]" value="Blog"> Blog / News section</label>
+                    <label><input type="checkbox" name="features[]" value="Live chat"> Live chat widget</label>
+                    <label><input type="checkbox" name="features[]" value="AI chatbot"> AI chatbot</label>
+                    <label><input type="checkbox" name="features[]" value="Newsletter signup"> Newsletter signup</label>
+                    <label><input type="checkbox" name="features[]" value="Image gallery"> Image gallery / Portfolio</label>
+                    <label><input type="checkbox" name="features[]" value="Video integration"> Video integration</label>
+                    <label><input type="checkbox" name="features[]" value="Social media integration"> Social media integration</label>
+                    <label><input type="checkbox" name="features[]" value="Customer login/portal"> Customer login / Portal</label>
+                    <label><input type="checkbox" name="features[]" value="Multi-language"> Multi-language support</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="other_features">Any other specific features or functionality needed?</label>
+                <textarea id="other_features" name="other_features" rows="3" placeholder="Describe any custom features not listed above"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 3: Design Preferences -->
+        <section class="form-section" id="design">
+            <h2><span class="section-number">3</span> Design Preferences</h2>
+
+            <div class="form-group">
+                <label>What overall vibe are you going for?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="vibe[]" value="Professional/Corporate"> Professional / Corporate</label>
+                    <label><input type="checkbox" name="vibe[]" value="Modern/Minimal"> Modern / Minimal</label>
+                    <label><input type="checkbox" name="vibe[]" value="Creative/Bold"> Creative / Bold</label>
+                    <label><input type="checkbox" name="vibe[]" value="Friendly/Approachable"> Friendly / Approachable</label>
+                    <label><input type="checkbox" name="vibe[]" value="Luxurious/Premium"> Luxurious / Premium</label>
+                    <label><input type="checkbox" name="vibe[]" value="Playful/Fun"> Playful / Fun</label>
+                    <label><input type="checkbox" name="vibe[]" value="Tech/Futuristic"> Tech / Futuristic</label>
+                    <label><input type="checkbox" name="vibe[]" value="Warm/Organic"> Warm / Organic</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inspiration_sites">
+                    Share 3-5 websites you like
+                    <span class="label-hint">Include URLs and briefly explain what you like about each</span>
+                </label>
+                <textarea id="inspiration_sites" name="inspiration_sites" rows="5" placeholder="Example:
+1. https://example.com - I love the clean layout and hero section
+2. https://another.com - Great use of colors and animations
+3. https://third.com - The navigation is very intuitive"></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="brand_colors">
+                        Brand Colors
+                        <span class="label-hint">Hex codes if known, or describe colors</span>
+                    </label>
+                    <input type="text" id="brand_colors" name="brand_colors" placeholder="e.g., #1a365d (navy blue), #e67e22 (orange)">
+                </div>
+                <div class="form-group">
+                    <label for="fonts">
+                        Preferred Fonts
+                        <span class="label-hint">If you have specific fonts in mind</span>
+                    </label>
+                    <input type="text" id="fonts" name="fonts" placeholder="e.g., Open Sans, Montserrat, or describe style">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="design_notes">Any specific design requirements or things to avoid?</label>
+                <textarea id="design_notes" name="design_notes" rows="3" placeholder="e.g., No stock photos, must match existing brand guidelines, avoid dark themes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Upload Brand Assets</label>
+                <div class="file-upload-info">
+                    <p><strong>Share your files via cloud storage</strong></p>
+                    <p>Upload your logo, brand guidelines, and images to <a href="https://drive.google.com" target="_blank">Google Drive</a>, <a href="https://www.dropbox.com" target="_blank">Dropbox</a>, or <a href="https://wetransfer.com" target="_blank">WeTransfer</a> and paste the share links below.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="asset_links">
+                    Links to your brand assets
+                    <span class="label-hint">Logo files, brand guidelines, photos to use, etc.</span>
+                </label>
+                <textarea id="asset_links" name="asset_links" rows="4" placeholder="Paste your Google Drive, Dropbox, or WeTransfer links here"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 4: Content -->
+        <section class="form-section" id="content">
+            <h2><span class="section-number">4</span> Content & Pages</h2>
+
+            <div class="form-group">
+                <label>What pages do you need?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="pages[]" value="Home" checked> Home</label>
+                    <label><input type="checkbox" name="pages[]" value="About"> About / About Us</label>
+                    <label><input type="checkbox" name="pages[]" value="Services"> Services</label>
+                    <label><input type="checkbox" name="pages[]" value="Products"> Products / Shop</label>
+                    <label><input type="checkbox" name="pages[]" value="Portfolio"> Portfolio / Gallery</label>
+                    <label><input type="checkbox" name="pages[]" value="Team"> Team / Our People</label>
+                    <label><input type="checkbox" name="pages[]" value="Blog"> Blog / News</label>
+                    <label><input type="checkbox" name="pages[]" value="FAQ"> FAQ</label>
+                    <label><input type="checkbox" name="pages[]" value="Pricing"> Pricing</label>
+                    <label><input type="checkbox" name="pages[]" value="Testimonials"> Testimonials / Reviews</label>
+                    <label><input type="checkbox" name="pages[]" value="Contact"> Contact</label>
+                    <label><input type="checkbox" name="pages[]" value="Booking"> Booking / Schedule</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="other_pages">Any other pages needed?</label>
+                <input type="text" id="other_pages" name="other_pages" placeholder="e.g., Case Studies, Resources, Careers, Legal pages">
+            </div>
+
+            <div class="form-group">
+                <label>Do you have the content (text/copy) ready?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="content_ready" value="Yes, all ready"> <span>Yes, all ready</span></label>
+                    <label><input type="radio" name="content_ready" value="Partially ready"> <span>Partially ready</span></label>
+                    <label><input type="radio" name="content_ready" value="Need help writing"> <span>Need help writing</span></label>
+                    <label><input type="radio" name="content_ready" value="Will provide later"> <span>Will provide later</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="content_links">
+                    Links to existing content
+                    <span class="label-hint">Current website, brochures, documents with content to use</span>
+                </label>
+                <textarea id="content_links" name="content_links" rows="3" placeholder="Paste links to any existing content, documents, or your current website"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 5: Technical Requirements -->
+        <section class="form-section" id="technical">
+            <h2><span class="section-number">5</span> Technical Requirements</h2>
+
+            <div class="form-group">
+                <label for="domain">Do you have a domain name?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="has_domain" value="Yes"> <span>Yes, I own a domain</span></label>
+                    <label><input type="radio" name="has_domain" value="No, need one"> <span>No, I need one</span></label>
+                    <label><input type="radio" name="has_domain" value="Not sure"> <span>Not sure</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="domain_name">Domain name (if you have one)</label>
+                <input type="text" id="domain_name" name="domain_name" placeholder="e.g., yourbusiness.com">
+            </div>
+
+            <div class="form-group">
+                <label>Do you need any integrations?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="integrations[]" value="Payment processing"> Payment processing (Stripe, PayPal, Square)</label>
+                    <label><input type="checkbox" name="integrations[]" value="Email marketing"> Email marketing (Mailchimp, ConvertKit, etc.)</label>
+                    <label><input type="checkbox" name="integrations[]" value="CRM"> CRM system (HubSpot, Salesforce, etc.)</label>
+                    <label><input type="checkbox" name="integrations[]" value="Booking/Scheduling"> Booking system (Calendly, Acuity, etc.)</label>
+                    <label><input type="checkbox" name="integrations[]" value="Analytics"> Analytics (Google Analytics, etc.)</label>
+                    <label><input type="checkbox" name="integrations[]" value="Social media"> Social media feeds</label>
+                    <label><input type="checkbox" name="integrations[]" value="Accounting"> Accounting software (Xero, QuickBooks)</label>
+                    <label><input type="checkbox" name="integrations[]" value="Other"> Other (specify in notes)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="technical_notes">Any other technical requirements or existing systems to connect?</label>
+                <textarea id="technical_notes" name="technical_notes" rows="3"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 6: Competitors -->
+        <section class="form-section" id="competitors">
+            <h2><span class="section-number">6</span> Competitors & Market</h2>
+
+            <div class="form-group">
+                <label for="competitors">
+                    Who are your main competitors?
+                    <span class="label-hint">List 2-3 competitors and their websites. What do you like/dislike about their sites?</span>
+                </label>
+                <textarea id="competitors" name="competitors" rows="5" placeholder="Example:
+1. Competitor A (www.competitor-a.com) - Like their product pages, but site feels outdated
+2. Competitor B (www.competitor-b.com) - Great mobile experience, but too cluttered"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="differentiator">What makes you different from competitors?</label>
+                <textarea id="differentiator" name="differentiator" rows="3" placeholder="What's your unique value proposition? Why should customers choose you?"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 7: Timeline & Budget -->
+        <section class="form-section" id="timeline">
+            <h2><span class="section-number">7</span> Timeline & Budget</h2>
+
+            <div class="form-group">
+                <label>When do you need the website launched?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="timeline" value="ASAP"> <span>ASAP</span></label>
+                    <label><input type="radio" name="timeline" value="Within 1 month"> <span>Within 1 month</span></label>
+                    <label><input type="radio" name="timeline" value="1-3 months"> <span>1-3 months</span></label>
+                    <label><input type="radio" name="timeline" value="3+ months"> <span>3+ months</span></label>
+                    <label><input type="radio" name="timeline" value="No rush"> <span>No rush</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="launch_date">Specific launch date (if any)</label>
+                <input type="text" id="launch_date" name="launch_date" placeholder="e.g., Before holiday season, Company anniversary">
+            </div>
+
+            <div class="form-group">
+                <label>What's your budget range?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="budget" value="Under $1,000"> <span>Under $1,000</span></label>
+                    <label><input type="radio" name="budget" value="$1,000 - $3,000"> <span>$1,000 - $3,000</span></label>
+                    <label><input type="radio" name="budget" value="$3,000 - $5,000"> <span>$3,000 - $5,000</span></label>
+                    <label><input type="radio" name="budget" value="$5,000 - $10,000"> <span>$5,000 - $10,000</span></label>
+                    <label><input type="radio" name="budget" value="$10,000+"> <span>$10,000+</span></label>
+                    <label><input type="radio" name="budget" value="Not sure yet"> <span>Not sure yet</span></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Additional Information -->
+        <section class="form-section">
+            <h2><span class="section-number">8</span> Anything Else?</h2>
+
+            <div class="form-group">
+                <label for="additional_info">
+                    Is there anything else you'd like us to know?
+                    <span class="label-hint">Any other details, concerns, or questions about the project</span>
+                </label>
+                <textarea id="additional_info" name="additional_info" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="referral">How did you hear about us?</label>
+                <input type="text" id="referral" name="referral" placeholder="e.g., Google, Referral from friend, LinkedIn">
+            </div>
+        </section>
+
+        <!-- Submit -->
+        <div class="submit-section">
+            <button type="submit" class="btn btn-primary">Submit Project Brief</button>
+            <p>We'll review your brief and get back to you within 1-2 business days to discuss next steps.</p>
+        </div>
+    </form>
+
+    <!-- Success Message (shown after submission) -->
+    <script>
+        // Check for success parameter
+        if (window.location.search.includes('success=true')) {
+            document.querySelector('.intake-form').innerHTML = `
+                <div style="text-align: center; padding: 4rem 2rem;">
+                    <h2 style="color: var(--color-primary); margin-bottom: 1rem;">Thank you!</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 2rem;">Your project brief has been submitted successfully. We'll review your information and get back to you within 1-2 business days.</p>
+                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                </div>
+            `;
+        }
+
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        const form = document.querySelector('.intake-form');
+
+        function updateProgress() {
+            const sections = form.querySelectorAll('.form-section');
+            const totalHeight = form.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY - form.offsetTop + 200;
+            const progress = Math.min(100, Math.max(0, (scrolled / totalHeight) * 100));
+            progressBar.style.width = progress + '%';
+        }
+
+        window.addEventListener('scroll', updateProgress);
+        updateProgress();
+
+        // Section navigation highlighting
+        const sectionLinks = document.querySelectorAll('.section-links a');
+        const formSections = document.querySelectorAll('.form-section');
+
+        function updateSectionHighlight() {
+            const scrollPos = window.scrollY + 150;
+
+            formSections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                    sectionLinks.forEach(link => link.classList.remove('active'));
+                    if (sectionLinks[index]) {
+                        sectionLinks[index].classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateSectionHighlight);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
