@@ -1,4 +1,7 @@
+# robots.txt for aiworkforce.consulting
+
 User-agent: *
 Allow: /
 
-Sitemap: https://aiworkforce.consultancy/sitemap.xml
+# Sitemap location
+Sitemap: https://aiworkforce.consulting/sitemap.xml
