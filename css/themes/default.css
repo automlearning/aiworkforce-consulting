@@ -1,0 +1,130 @@
+/* ============================================
+   Default Theme - Professional Blue/Orange
+   ============================================
+
+   A clean, professional theme with blue primary
+   and orange accent colors on a white background.
+
+   Usage: Load this file BEFORE base.css
+   <link rel="stylesheet" href="css/themes/default.css">
+   <link rel="stylesheet" href="css/base.css">
+   ============================================ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    /* ========== Core Colors ========== */
+    --color-primary: #1a365d;
+    --color-secondary: #2d5a87;
+    --color-accent: #e67e22;
+
+    /* Derived colors */
+    --color-primary-light: color-mix(in srgb, var(--color-primary) 15%, white);
+    --color-primary-dark: color-mix(in srgb, var(--color-primary) 85%, black);
+
+    /* Neutrals */
+    --color-text: #1a1a1a;
+    --color-text-light: #666666;
+    --color-text-muted: #999999;
+    --color-background: #ffffff;
+    --color-background-alt: #f8f9fa;
+    --color-border: #e5e7eb;
+
+    /* ========== Typography ========== */
+    --font-heading: 'Newsreader', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --heading-weight: 500;
+
+    /* ========== Spacing ========== */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 5rem;
+
+    /* ========== Layout ========== */
+    --max-width: 1200px;
+    --max-width-narrow: 720px;
+
+    /* ========== Transitions ========== */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+
+    /* ========== Navigation ========== */
+    --nav-bg: var(--color-background);
+    --nav-cta-bg: var(--color-primary);
+    --nav-cta-color: white;
+    --nav-cta-hover-bg: var(--color-primary-dark);
+    --nav-cta-hover-color: white;
+
+    /* ========== Buttons ========== */
+    --btn-sweep-opacity: 0;
+
+    --btn-primary-bg: var(--color-primary);
+    --btn-primary-color: white;
+    --btn-primary-border: var(--color-primary);
+    --btn-primary-hover-bg: var(--color-primary-dark);
+    --btn-primary-hover-border: var(--color-primary-dark);
+    --btn-primary-hover-color: white;
+
+    --btn-secondary-bg: transparent;
+    --btn-secondary-color: var(--color-primary);
+    --btn-secondary-border: var(--color-primary);
+    --btn-secondary-hover-bg: var(--color-primary);
+    --btn-secondary-hover-color: white;
+
+    /* ========== Hero ========== */
+    --hero-bg: var(--color-background-alt);
+    --hero-img-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+    /* ========== Page Header ========== */
+    --page-header-bg: var(--color-background-alt);
+
+    /* ========== Cards ========== */
+    --card-bg: var(--color-background);
+    --card-border: var(--color-border);
+    --card-hover-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    /* ========== Stats Section ========== */
+    --stats-bg: var(--color-primary);
+    --stats-color: white;
+
+    /* ========== Testimonials ========== */
+    --testimonial-bg: var(--color-background);
+
+    /* ========== Newsletter ========== */
+    --newsletter-bg: var(--color-primary-light);
+
+    /* ========== Form Inputs ========== */
+    --input-bg: white;
+    --input-color: var(--color-text);
+    --input-border: var(--color-border);
+    --input-placeholder: var(--color-text-muted);
+
+    /* ========== Sidebar/Boxes ========== */
+    --sidebar-bg: var(--color-background-alt);
+    --deliverables-bg: var(--color-background-alt);
+
+    /* ========== Client Logos ========== */
+    --logo-filter: grayscale(100%);
+    --logo-opacity: 0.6;
+    --logo-hover-filter: grayscale(0%);
+
+    /* ========== Footer ========== */
+    --footer-bg: var(--color-text);
+    --footer-color: white;
+    --footer-muted: rgba(255, 255, 255, 0.5);
+    --footer-link: rgba(255, 255, 255, 0.7);
+    --footer-divider: rgba(255, 255, 255, 0.1);
+    --social-link-hover-bg: rgba(255, 255, 255, 0.1);
+
+    /* ========== Selection ========== */
+    --selection-bg: rgba(26, 54, 93, 0.3);
+
+    /* ========== Scrollbar ========== */
+    --scrollbar-track: var(--color-background-alt);
+    --scrollbar-thumb: var(--color-primary);
+    --scrollbar-thumb-hover: var(--color-secondary);
+}

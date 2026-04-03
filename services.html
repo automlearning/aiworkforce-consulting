@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Three focused consulting engagements for banking and financial services leaders. Prove analytics value, commercialise credit models, and build funded roadmaps.">
-    <title>Services | Analytics ROI Audit, Credit Model Commercialisation, Strategy Roadmaps</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AI-enabled decision systems, automation and systems integration, and advanced analytics services for small and mid-sized businesses.">
+    <title>Services | Samuel Kambasha - AI Orchestration & Automation</title>
+    <meta name="author" content="Samuel Kambasha">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aiworkforce.consultancy/services.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Services | Samuel Kambasha - AI Orchestration & Automation">
+    <meta property="og:description" content="AI-enabled decision systems, automation and systems integration, and advanced analytics services for small and mid-sized businesses.">
+    <meta property="og:url" content="https://aiworkforce.consultancy/services.html">
+    <meta property="og:site_name" content="Samuel Kambasha">
+    <meta property="og:image" content="https://aiworkforce.consultancy/LinkdInPhoto.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services | Samuel Kambasha - AI Orchestration & Automation">
+    <meta name="twitter:description" content="AI-enabled decision systems, automation and systems integration, and advanced analytics services for small and mid-sized businesses.">
+    <meta name="twitter:image" content="https://aiworkforce.consultancy/LinkdInPhoto.png">
+
+    <script data-optional="{{GA_TRACKING_ID}}" class="ga-script">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{GA_TRACKING_ID}}');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_TRACKING_ID}}" data-optional="{{GA_TRACKING_ID}}" class="ga-script"></script>
+
+    <!-- Theme CSS - CHANGE THIS LINE TO SWITCH THEMES -->
+    <!-- Options: css/themes/default.css | css/themes/cyber-noir.css | css/themes/holographic-glass.css | css/themes/ai-minimal-luxe.css | css/themes/neon-brutalist.css | css/themes/soft-pastel.css | css/themes/ocean-depths.css | css/themes/retro-terminal.css | css/themes/warm-earthen.css | css/themes/frosted-nordic.css | css/themes/amber-crt.css | css/themes/blue-mainframe.css | css/themes/matrix-rain.css | css/themes/dos-command.css | css/themes/vscode-dark.css -->
+    <link rel="stylesheet" href="css/themes/default.css" id="theme-css">
+
+    <!-- Base Styles (always load after theme) -->
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- Chatbot Widget -->
+    <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -21,9 +52,10 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="showcase/">Our Work</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
+                <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
             </ul>
         </div>
     </nav>
@@ -31,132 +63,140 @@
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1>Three ways to work together</h1>
-            <p class="lead">Each engagement is designed to deliver a clear commercial outcome—not a report that sits unread. I work with senior data leaders who need to prove value, secure funding, or build the case for strategic investment.</p>
+            <h1>Services</h1>
+            <p class="page-intro">I work with Small to medium-sized businesses to deliver practical solutions that drive real results.</p>
         </div>
     </header>
 
-    <!-- Service 1: Analytics ROI Audit -->
-    <section class="service-full">
+    <!-- Services Detail -->
+    <section class="section section-services-detail">
         <div class="container">
-            <div class="service-header">
-                <h2>Analytics ROI Audit</h2>
-                <span class="duration">4–6 weeks</span>
+            <div class="service-detail">
+                <div class="service-detail-content">
+                    <h2>AI-Enabled Decision Systems</h2>
+                    <p class="service-detail-desc">I design and deliver AI systems that let your team interact with data, documents, and processes using natural language—with reliability and governance built in.</p>
+                    <div class="service-deliverables" data-optional="Secure document Q&A and knowledge retrieval systems|Voice-enabled assistants for internal or customer-facing use|Natural language data access layers and query interfaces|Automated analysis and decision-support pipelines">
+                        <h3>Typical deliverables</h3>
+                        <ul class="deliverables-list" data-items="Secure document Q&A and knowledge retrieval systems|Voice-enabled assistants for internal or customer-facing use|Natural language data access layers and query interfaces|Automated analysis and decision-support pipelines"></ul>
+                    </div>
+                    <div class="service-detail-meta">
+                        <div class="meta-item" data-optional="4-8 weeks">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">4-8 weeks</span>
+                        </div>
+                        <div class="meta-item" data-optional="{{SERVICE_1_PRICE}}" data-show-pricing="no">
+                            <span class="meta-label">Investment</span>
+                            <span class="meta-value">{{SERVICE_1_PRICE}}</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
             </div>
-            <div class="service-body">
-                <h3>What it is</h3>
-                <p>A structured review of your current analytics initiatives, designed to quantify their financial impact and identify where value is being captured—or lost.</p>
 
-                <h3>Who it's for</h3>
-                <p>Chief Data Officers and analytics leaders who need to demonstrate ROI to the board, justify existing investments, or make the case for additional funding.</p>
+            <div class="service-detail">
+                <div class="service-detail-content">
+                    <h2>Automation & Systems Integration</h2>
+                    <p class="service-detail-desc">I build end-to-end automation of data flows and business processes, connecting your systems and reducing manual effort across analytics, operations, and reporting.</p>
+                    <div class="service-deliverables" data-optional="Automated and resilient data pipelines|System integration and orchestration workflows|Notification, alerting, and exception-handling systems|Data quality checks and operational monitoring">
+                        <h3>Typical deliverables</h3>
+                        <ul class="deliverables-list" data-items="Automated and resilient data pipelines|System integration and orchestration workflows|Notification, alerting, and exception-handling systems|Data quality checks and operational monitoring"></ul>
+                    </div>
+                    <div class="service-detail-meta">
+                        <div class="meta-item" data-optional="3-6 weeks">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">3-6 weeks</span>
+                        </div>
+                        <div class="meta-item" data-optional="{{SERVICE_2_PRICE}}" data-show-pricing="no">
+                            <span class="meta-label">Investment</span>
+                            <span class="meta-value">{{SERVICE_2_PRICE}}</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
 
-                <h3>What you get</h3>
-                <ul>
-                    <li>Assessment of current analytics initiatives against commercial outcomes</li>
-                    <li>Measurement framework to capture financial benefits not currently tracked</li>
-                    <li>Executive-ready report quantifying value delivered and value at risk</li>
-                    <li>Prioritised recommendations: what to scale, refine, or stop</li>
-                </ul>
-
-                <h3>Outcome</h3>
-                <p>Clear, quantified evidence of what your analytics investments are worth—and a roadmap for increasing their impact.</p>
-
-                <div class="service-cta">
-                    <a href="contact.html" class="btn btn-primary">Discuss an Analytics ROI Audit</a>
+            <div class="service-detail">
+                <div class="service-detail-content">
+                    <h2>Advanced Analytics & Data Science</h2>
+                    <p class="service-detail-desc">I apply statistical modelling and data science to drive insight, prediction, and better decisions—focused on commercial outcomes rather than academic models.</p>
+                    <div class="service-deliverables" data-optional="Analytical insights and decision-ready reporting|Predictive models and scoring frameworks|Forecasts and scenario analysis|Measurement frameworks and model documentation">
+                        <h3>Typical deliverables</h3>
+                        <ul class="deliverables-list" data-items="Analytical insights and decision-ready reporting|Predictive models and scoring frameworks|Forecasts and scenario analysis|Measurement frameworks and model documentation"></ul>
+                    </div>
+                    <div class="service-detail-meta">
+                        <div class="meta-item" data-optional="2-6 weeks">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">2-6 weeks</span>
+                        </div>
+                        <div class="meta-item" data-optional="{{SERVICE_3_PRICE}}" data-show-pricing="no">
+                            <span class="meta-label">Investment</span>
+                            <span class="meta-value">{{SERVICE_3_PRICE}}</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service 2: Credit Model Commercialisation -->
-    <section class="service-full">
+    <!-- How It Works -->
+    <section class="section section-process">
         <div class="container">
-            <div class="service-header">
-                <h2>Credit Model Commercialisation</h2>
-                <span class="duration">6–8 weeks</span>
-            </div>
-            <div class="service-body">
-                <h3>What it is</h3>
-                <p>A focused engagement to translate credit risk model improvements into commercial outcomes—and build the business case for executive approval.</p>
-
-                <h3>Who it's for</h3>
-                <p>Heads of Credit Risk and Chief Risk Officers at banks, fintechs, and SME lenders who have invested in model development but need to demonstrate financial impact.</p>
-
-                <h3>What you get</h3>
-                <ul>
-                    <li>Model performance review (discrimination, stability, segmentation)</li>
-                    <li>Commercial impact analysis: avoided losses, revenue uplift, operational efficiency</li>
-                    <li>Board-ready business case with quantified benefits</li>
-                    <li>Recommendations for model enhancement or alternative data integration</li>
-                </ul>
-
-                <h3>Outcome</h3>
-                <p>A credible, quantified case for your credit model investment—ready for CRO, CFO, or board presentation.</p>
-
-                <div class="service-cta">
-                    <a href="contact.html" class="btn btn-primary">Discuss Credit Model Commercialisation</a>
+            <h2 class="section-title">How it works</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <span class="step-number">1</span>
+                    <h3>Discovery Call</h3>
+                    <p>We start with a brief conversation to understand your challenges and goals.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">2</span>
+                    <h3>Proposal</h3>
+                    <p>I'll put together a tailored proposal with clear scope, timeline, and investment.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">3</span>
+                    <h3>Delivery</h3>
+                    <p>We work together to deliver outcomes, with regular check-ins along the way.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service 3: 90-Day Analytics Roadmap -->
-    <section class="service-full">
+    <!-- FAQ Section -->
+    <section class="section section-faq" data-optional="{{FAQ_1_QUESTION}}">
         <div class="container">
-            <div class="service-header">
-                <h2>90-Day Analytics Roadmap</h2>
-                <span class="duration">6–8 weeks</span>
-            </div>
-            <div class="service-body">
-                <h3>What it is</h3>
-                <p>A strategic planning engagement that delivers a prioritised, fundable analytics roadmap—balancing quick wins with longer-term ML and AI investments.</p>
-
-                <h3>Who it's for</h3>
-                <p>Senior data leaders who need to align their analytics function with business priorities, secure executive sponsorship, and demonstrate strategic value.</p>
-
-                <h3>What you get</h3>
-                <ul>
-                    <li>Current-state assessment of analytics capabilities and gaps</li>
-                    <li>Prioritised initiative roadmap with commercial rationale</li>
-                    <li>Business cases for top-priority investments</li>
-                    <li>Executive sponsorship strategy and stakeholder mapping</li>
-                    <li>90-day implementation plan with milestones</li>
-                </ul>
-
-                <h3>Outcome</h3>
-                <p>A clear, funded path forward—with executive buy-in and a plan to demonstrate value within the first quarter.</p>
-
-                <div class="service-cta">
-                    <a href="contact.html" class="btn btn-primary">Discuss a 90-Day Roadmap</a>
+            <h2 class="section-title">Common questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" data-optional="{{FAQ_1_QUESTION}}">
+                    <button class="faq-question">{{FAQ_1_QUESTION}}</button>
+                    <div class="faq-answer">
+                        <p>{{FAQ_1_ANSWER}}</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-optional="{{FAQ_2_QUESTION}}">
+                    <button class="faq-question">{{FAQ_2_QUESTION}}</button>
+                    <div class="faq-answer">
+                        <p>{{FAQ_2_ANSWER}}</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-optional="{{FAQ_3_QUESTION}}">
+                    <button class="faq-question">{{FAQ_3_QUESTION}}</button>
+                    <div class="faq-answer">
+                        <p>{{FAQ_3_ANSWER}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Engage Me Section -->
+    <!-- CTA Section -->
     <section class="section section-cta-block">
         <div class="container">
-            <h2 class="section-title">Why work with me</h2>
-            <div class="credentials-grid">
-                <div class="credential-item">
-                    <h3>I've sat where you sit</h3>
-                    <p>I've partnered with CROs, product leaders, and ExCo members to shape analytics strategy at major banks. I understand the pressure to prove value and the politics of securing funding.</p>
-                </div>
-                <div class="credential-item">
-                    <h3>I focus on commercial outcomes</h3>
-                    <p>I don't deliver reports for their own sake. Every engagement is designed to produce evidence that changes decisions—funding approvals, initiative prioritisation, executive confidence.</p>
-                </div>
-                <div class="credential-item">
-                    <h3>I work at senior level</h3>
-                    <p>I engage directly with the stakeholders who control budgets and strategy. The work is designed to land with them, not sit in a shared drive.</p>
-                </div>
-                <div class="credential-item">
-                    <h3>I'm selective</h3>
-                    <p>I take on a small number of clients at any time. This means you get focused attention, not a junior team and a monthly check-in.</p>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+            <h2 class="section-title">Ready to get started?</h2>
+            <div class="content-narrow">
+                <p>Let's discuss how I can help you achieve your goals.</p>
+                <a href="contact.html" class="btn btn-primary">Book a Call</a>
             </div>
         </div>
     </section>
@@ -167,21 +207,40 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Samuel Kambasha</span>
-                    <p>Analytics strategy and commercial impact for banking and financial services.</p>
+                    <p>AI that ships. AI orchestration and automation design for Fintech, Banking, and professional services.</p>
                 </div>
                 <div class="footer-links">
                     <a href="services.html">Services</a>
+                    <a href="showcase/">Our Work</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/samuel-kambasha-86b4a471/" data-optional="https://www.linkedin.com/in/samuel-kambasha-86b4a471/" aria-label="LinkedIn" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="{{TWITTER_URL}}" data-optional="{{TWITTER_URL}}" aria-label="Twitter" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="{{GITHUB_URL}}" data-optional="{{GITHUB_URL}}" aria-label="GitHub" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="{{YOUTUBE_URL}}" data-optional="{{YOUTUBE_URL}}" aria-label="YouTube" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="{{PODCAST_URL}}" data-optional="{{PODCAST_URL}}" aria-label="Podcast" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm3.6 17.472c0 .528-.432.96-.96.96h-5.28c-.528 0-.96-.432-.96-.96v-1.92c0-.528.432-.96.96-.96h5.28c.528 0 .96.432.96.96v1.92zm.624-5.088c-.24.816-.72 1.536-1.392 2.064-.336.264-.744.408-1.176.408H10.32c-.432 0-.84-.144-1.176-.408-.672-.528-1.152-1.248-1.392-2.064-.24-.816-.168-1.68.216-2.448.384-.768 1.008-1.368 1.8-1.728.336-.144.696-.216 1.056-.216h2.352c.36 0 .72.072 1.056.216.792.36 1.416.96 1.8 1.728.384.768.456 1.632.216 2.448z"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Samuel Kambasha. All rights reserved.</p>
-                <p>Sydney, Australia</p>
+                <p>Melbourne, Australia</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>
