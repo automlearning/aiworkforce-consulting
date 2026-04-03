@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="15+ years in Banking and Fintech customer lifecycle management. AI-powered solutions for acquisition, engagement, retention, and advocacy.">
-    <title>Samuel Kambasha | Customer Lifecycle Management Expert</title>
+    <meta name="description" content="Applied AI and analytics consulting focused on practical automation, agent orchestration, and decision systems for small and mid-sized businesses.">
+    <title>Samuel Kambasha | AI Orchestration & Automation Design</title>
     <meta name="author" content="Samuel Kambasha">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://aiworkforce.consulting/">
+    <link rel="canonical" href="https://aiworkforce.consultancy/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Samuel Kambasha | Customer Lifecycle Management Expert">
-    <meta property="og:description" content="15+ years in Banking and Fintech customer lifecycle management. AI-powered solutions for acquisition, engagement, retention, and advocacy.">
-    <meta property="og:url" content="https://aiworkforce.consulting/">
+    <meta property="og:title" content="Samuel Kambasha | AI Orchestration & Automation Design">
+    <meta property="og:description" content="Applied AI and analytics consulting focused on practical automation, agent orchestration, and decision systems for small and mid-sized businesses.">
+    <meta property="og:url" content="https://aiworkforce.consultancy/">
     <meta property="og:site_name" content="Samuel Kambasha">
-    <meta property="og:image" content="https://aiworkforce.consulting/LinkdInPhoto.png">
+    <meta property="og:image" content="https://aiworkforce.consultancy/LinkdInPhoto.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Samuel Kambasha | Customer Lifecycle Management Expert">
-    <meta name="twitter:description" content="15+ years in Banking and Fintech customer lifecycle management. AI-powered solutions for acquisition, engagement, retention, and advocacy.">
-    <meta name="twitter:image" content="https://aiworkforce.consulting/LinkdInPhoto.png">
+    <meta name="twitter:title" content="Samuel Kambasha | AI Orchestration & Automation Design">
+    <meta name="twitter:description" content="Applied AI and analytics consulting focused on practical automation, agent orchestration, and decision systems for small and mid-sized businesses.">
+    <meta name="twitter:image" content="https://aiworkforce.consultancy/LinkdInPhoto.png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -29,8 +29,8 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Samuel Kambasha",
-        "description": "Customer lifecycle management expert with 15+ years in Banking and Fintech. AI-powered solutions for the complete customer journey.",
-        "url": "https://aiworkforce.consulting",
+        "description": "AI orchestration and automation design for Fintech, Banking, and professional services.",
+        "url": "https://aiworkforce.consultancy",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Melbourne",
@@ -42,421 +42,24 @@
     }
     </script>
 
-    <!-- Theme CSS -->
+    <!-- Google Analytics -->
+    <script data-optional="{{GA_TRACKING_ID}}" class="ga-script">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{GA_TRACKING_ID}}');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_TRACKING_ID}}" data-optional="{{GA_TRACKING_ID}}" class="ga-script"></script>
+
+    <!-- Theme CSS - CHANGE THIS LINE TO SWITCH THEMES -->
+    <!-- Options: css/themes/default.css | css/themes/cyber-noir.css | css/themes/holographic-glass.css | css/themes/ai-minimal-luxe.css | css/themes/neon-brutalist.css | css/themes/soft-pastel.css | css/themes/ocean-depths.css | css/themes/retro-terminal.css | css/themes/warm-earthen.css | css/themes/frosted-nordic.css | css/themes/amber-crt.css | css/themes/blue-mainframe.css | css/themes/matrix-rain.css | css/themes/dos-command.css | css/themes/vscode-dark.css -->
     <link rel="stylesheet" href="css/themes/default.css" id="theme-css">
+
+    <!-- Base Styles (always load after theme) -->
     <link rel="stylesheet" href="css/base.css">
+
+    <!-- Chatbot Widget -->
     <link rel="stylesheet" href="chatbot.css">
-
-    <style>
-        /* Hero with lifecycle focus */
-        .hero-lifecycle {
-            padding: 4rem 0 2rem;
-            background: linear-gradient(135deg, var(--color-background) 0%, var(--color-surface) 100%);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (max-width: 900px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
-        .hero-content h1 {
-            font-size: 2.75rem;
-            margin-bottom: 1rem;
-            line-height: 1.15;
-        }
-
-        .hero-content .subtitle {
-            font-size: 1.25rem;
-            color: var(--color-text-muted);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .hero-content .experience-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--color-primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 900px) {
-            .hero-cta {
-                justify-content: center;
-            }
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--color-primary);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        }
-
-        /* Lifecycle Section */
-        .lifecycle-section {
-            padding: 4rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .section-header h2 {
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            color: var(--color-text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .lifecycle-chart {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            aspect-ratio: 1;
-        }
-
-        .lifecycle-center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 130px;
-            height: 130px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 1rem;
-            z-index: 10;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-
-        .lifecycle-stage {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: var(--color-surface);
-            border: 3px solid var(--color-border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.8rem;
-            padding: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .lifecycle-stage:hover,
-        .lifecycle-stage.active {
-            transform: scale(1.1);
-            border-color: var(--color-primary);
-            background: var(--color-primary);
-            color: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-
-        .lifecycle-stage.active::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--color-primary);
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.3); opacity: 0; }
-        }
-
-        /* Position stages */
-        .stage-1 { top: 5%; left: 50%; transform: translateX(-50%); }
-        .stage-2 { top: 20%; right: 8%; }
-        .stage-3 { top: 55%; right: 3%; }
-        .stage-4 { bottom: 5%; left: 50%; transform: translateX(-50%); }
-        .stage-5 { top: 55%; left: 3%; }
-        .stage-6 { top: 20%; left: 8%; }
-
-        .stage-1:hover, .stage-1.active { transform: translateX(-50%) scale(1.1); }
-        .stage-4:hover, .stage-4.active { transform: translateX(-50%) scale(1.1); }
-
-        .lifecycle-connections {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 75%;
-            height: 75%;
-            border: 2px dashed var(--color-border);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        /* Stage Details Panel */
-        .stage-details {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-        }
-
-        .stage-details.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .stage-details h3 {
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .stage-details h3 .stage-number {
-            background: var(--color-primary);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-        }
-
-        .stage-details .description {
-            color: var(--color-text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-
-        .service-item {
-            background: var(--color-background);
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            padding: 1rem;
-            transition: all 0.2s ease;
-        }
-
-        .service-item:hover {
-            border-color: var(--color-primary);
-            transform: translateY(-2px);
-        }
-
-        .service-item h4 {
-            margin-bottom: 0.25rem;
-            font-size: 0.95rem;
-        }
-
-        .service-item p {
-            font-size: 0.8rem;
-            color: var(--color-text-muted);
-            margin: 0;
-        }
-
-        .metrics-row {
-            display: flex;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--color-border);
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .metric {
-            text-align: center;
-        }
-
-        .metric-value {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-
-        .metric-label {
-            font-size: 0.7rem;
-            color: var(--color-text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Mobile linear view */
-        @media (max-width: 600px) {
-            .lifecycle-chart {
-                display: none;
-            }
-            .lifecycle-linear {
-                display: block !important;
-            }
-        }
-
-        .lifecycle-linear {
-            display: none;
-            max-width: 400px;
-            margin: 0 auto 2rem;
-        }
-
-        .linear-stage {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.75rem 1rem;
-            background: var(--color-surface);
-            border: 2px solid var(--color-border);
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .linear-stage:hover,
-        .linear-stage.active {
-            border-color: var(--color-primary);
-            background: var(--color-primary);
-            color: white;
-        }
-
-        .linear-stage .number {
-            width: 32px;
-            height: 32px;
-            background: var(--color-primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 0.85rem;
-            flex-shrink: 0;
-        }
-
-        .linear-stage.active .number {
-            background: white;
-            color: var(--color-primary);
-        }
-
-        .linear-connector {
-            width: 2px;
-            height: 15px;
-            background: var(--color-border);
-            margin-left: 1.25rem;
-        }
-
-        /* Why Me Section */
-        .why-section {
-            padding: 4rem 0;
-            background: var(--color-surface);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .why-card {
-            background: var(--color-background);
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .why-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .why-card h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .why-card p {
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            color: var(--color-text-muted);
-            max-width: 500px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -470,6 +73,7 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="services.html">Services</a></li>
+                <li><a href="customer-lifecycle.html">Lifecycle</a></li>
                 <li><a href="showcase/">Our Work</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
@@ -478,111 +82,183 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-lifecycle">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="experience-badge">
-                        <span>&#128188;</span> 15+ Years in Banking & Fintech
-                    </div>
-                    <h1>Customer Lifecycle Management Expert</h1>
-                    <p class="subtitle">I help financial institutions acquire, engage, retain, and grow their customer base using AI-powered lifecycle strategies that deliver measurable results.</p>
-                    <div class="hero-cta">
-                        <a href="contact.html" class="btn btn-primary">Book a Call</a>
-                        <a href="services.html" class="btn btn-secondary">View Services</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="LinkdInPhoto.png" alt="Samuel Kambasha">
-                </div>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1 class="hero-title">Applied AI orchestration for modern businesses.</h1>
+                <p class="hero-subtitle">Practical AI automations for small and mid-sized businesses—built to ship and deliver ROI.</p>
+                <a href="contact.html" class="btn btn-primary">Book a Call</a>
+                <a href="client-intake.html" class="btn btn-secondary">Start a Project Brief</a>
+            </div>
+            <div class="hero-image" data-optional="LinkdInPhoto.png">
+                <img src="LinkdInPhoto.png" alt="Samuel Kambasha">
             </div>
         </div>
     </header>
 
-    <!-- Interactive Lifecycle Section -->
-    <section class="lifecycle-section">
+    <!-- Stats Section -->
+    <section class="section section-stats" data-optional="{{STAT_1_NUMBER}}">
         <div class="container">
-            <div class="section-header">
-                <h2>The Customer Lifecycle</h2>
-                <p>Click on any stage to explore AI-powered services and proven outcomes at each touchpoint.</p>
-            </div>
-
-            <!-- Circular Chart (desktop) -->
-            <div class="lifecycle-chart">
-                <div class="lifecycle-connections"></div>
-                <div class="lifecycle-center">Customer<br>Lifecycle</div>
-
-                <div class="lifecycle-stage stage-1" data-stage="1">Awareness</div>
-                <div class="lifecycle-stage stage-2" data-stage="2">Acquisition</div>
-                <div class="lifecycle-stage stage-3" data-stage="3">Activation</div>
-                <div class="lifecycle-stage stage-4" data-stage="4">Engagement</div>
-                <div class="lifecycle-stage stage-5" data-stage="5">Retention</div>
-                <div class="lifecycle-stage stage-6" data-stage="6">Advocacy</div>
-            </div>
-
-            <!-- Linear View (mobile) -->
-            <div class="lifecycle-linear">
-                <div class="linear-stage" data-stage="1"><span class="number">1</span><span>Awareness</span></div>
-                <div class="linear-connector"></div>
-                <div class="linear-stage" data-stage="2"><span class="number">2</span><span>Acquisition</span></div>
-                <div class="linear-connector"></div>
-                <div class="linear-stage" data-stage="3"><span class="number">3</span><span>Activation</span></div>
-                <div class="linear-connector"></div>
-                <div class="linear-stage" data-stage="4"><span class="number">4</span><span>Engagement</span></div>
-                <div class="linear-connector"></div>
-                <div class="linear-stage" data-stage="5"><span class="number">5</span><span>Retention</span></div>
-                <div class="linear-connector"></div>
-                <div class="linear-stage" data-stage="6"><span class="number">6</span><span>Advocacy</span></div>
-            </div>
-
-            <!-- Stage Details Panel -->
-            <div class="stage-details" id="stageDetails">
-                <h3><span class="stage-number">1</span> <span id="stageName">Awareness</span></h3>
-                <p class="description" id="stageDescription">Building brand recognition and attracting potential customers.</p>
-                <div class="services-grid" id="servicesGrid"></div>
-                <div class="metrics-row" id="metricsRow"></div>
+            <div class="stats-grid">
+                <div class="stat" data-optional="{{STAT_1_NUMBER}}">
+                    <span class="stat-number">{{STAT_1_NUMBER}}</span>
+                    <span class="stat-label">{{STAT_1_LABEL}}</span>
+                </div>
+                <div class="stat" data-optional="{{STAT_2_NUMBER}}">
+                    <span class="stat-number">{{STAT_2_NUMBER}}</span>
+                    <span class="stat-label">{{STAT_2_LABEL}}</span>
+                </div>
+                <div class="stat" data-optional="{{STAT_3_NUMBER}}">
+                    <span class="stat-number">{{STAT_3_NUMBER}}</span>
+                    <span class="stat-label">{{STAT_3_LABEL}}</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Me Section -->
-    <section class="why-section">
+    <!-- Problem Section -->
+    <section class="section section-problem" data-optional="You know AI could help your business but don't know where to start. Tools don't integrate. Projects don't ship.">
         <div class="container">
-            <div class="section-header">
-                <h2>Why Work With Me</h2>
-                <p>Deep expertise where it matters most.</p>
+            <h2 class="section-title">The challenge</h2>
+            <div class="content-narrow">
+                <p>You know AI could help your business but don't know where to start. Tools don't integrate. Projects don't ship.</p>
             </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="icon">&#127970;</div>
-                    <h3>Banking & Fintech Focus</h3>
-                    <p>15+ years exclusively in financial services, understanding regulatory requirements, compliance, and customer expectations.</p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section section-solution" data-optional="I identify high-impact opportunities and build AI automations that work with your existing systems.">
+        <div class="container">
+            <h2 class="section-title">How I help</h2>
+            <div class="content-narrow">
+                <p>I identify high-impact opportunities and build AI automations that work with your existing systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section section-services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-intro">I work with small to medium-sized businesses to deliver measurable outcomes.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>AI-Enabled Decision Systems</h3>
+                    <p>I design and deliver AI systems that let your team interact with data, documents, and processes using natural language—with reliability and governance built in.</p>
+                    <div class="service-meta">
+                        <span class="service-duration" data-optional="4-8 weeks">4-8 weeks</span>
+                        <span class="service-price" data-optional="{{SERVICE_1_PRICE}}" data-show-pricing="no">{{SERVICE_1_PRICE}}</span>
+                    </div>
                 </div>
-                <div class="why-card">
-                    <div class="icon">&#128202;</div>
-                    <h3>Data-Driven Approach</h3>
-                    <p>Every strategy is backed by analytics. I measure what matters and optimize for outcomes that impact your bottom line.</p>
+                <div class="service-card">
+                    <h3>Automation & Systems Integration</h3>
+                    <p>I build end-to-end automation of data flows and business processes, connecting your systems and reducing manual effort across analytics, operations, and reporting.</p>
+                    <div class="service-meta">
+                        <span class="service-duration" data-optional="3-6 weeks">3-6 weeks</span>
+                        <span class="service-price" data-optional="{{SERVICE_2_PRICE}}" data-show-pricing="no">{{SERVICE_2_PRICE}}</span>
+                    </div>
                 </div>
-                <div class="why-card">
-                    <div class="icon">&#129302;</div>
-                    <h3>AI-Powered Solutions</h3>
-                    <p>Leveraging the latest in machine learning and automation to deliver scalable, intelligent lifecycle management.</p>
+                <div class="service-card">
+                    <h3>Advanced Analytics & Data Science</h3>
+                    <p>I apply statistical modelling and data science to drive insight, prediction, and better decisions—focused on commercial outcomes rather than academic models.</p>
+                    <div class="service-meta">
+                        <span class="service-duration" data-optional="2-6 weeks">2-6 weeks</span>
+                        <span class="service-price" data-optional="{{SERVICE_3_PRICE}}" data-show-pricing="no">{{SERVICE_3_PRICE}}</span>
+                    </div>
                 </div>
-                <div class="why-card">
-                    <div class="icon">&#128200;</div>
-                    <h3>Proven Results</h3>
-                    <p>Track record of reducing churn, increasing lifetime value, and driving measurable improvements across the customer journey.</p>
+            </div>
+            <div class="section-cta">
+                <a href="services.html" class="btn btn-secondary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-testimonials" data-optional="{{TESTIMONIAL_1_TEXT}}">
+        <div class="container">
+            <h2 class="section-title">What clients say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial" data-optional="{{TESTIMONIAL_1_TEXT}}">
+                    <blockquote>"{{TESTIMONIAL_1_TEXT}}"</blockquote>
+                    <div class="testimonial-author">
+                        <strong>{{TESTIMONIAL_1_AUTHOR}}</strong>
+                        <span>{{TESTIMONIAL_1_ROLE}}</span>
+                    </div>
                 </div>
+                <div class="testimonial" data-optional="{{TESTIMONIAL_2_TEXT}}">
+                    <blockquote>"{{TESTIMONIAL_2_TEXT}}"</blockquote>
+                    <div class="testimonial-author">
+                        <strong>{{TESTIMONIAL_2_AUTHOR}}</strong>
+                        <span>{{TESTIMONIAL_2_ROLE}}</span>
+                    </div>
+                </div>
+                <div class="testimonial" data-optional="{{TESTIMONIAL_3_TEXT}}">
+                    <blockquote>"{{TESTIMONIAL_3_TEXT}}"</blockquote>
+                    <div class="testimonial-author">
+                        <strong>{{TESTIMONIAL_3_AUTHOR}}</strong>
+                        <span>{{TESTIMONIAL_3_ROLE}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="section section-clients" data-optional="{{CLIENT_LOGOS}}">
+        <div class="container">
+            <h2 class="section-title-small">Trusted by</h2>
+            <div class="client-logos" data-logos="{{CLIENT_LOGOS}}">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-faq" data-optional="{{FAQ_1_QUESTION}}">
+        <div class="container">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" data-optional="{{FAQ_1_QUESTION}}">
+                    <button class="faq-question">{{FAQ_1_QUESTION}}</button>
+                    <div class="faq-answer">
+                        <p>{{FAQ_1_ANSWER}}</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-optional="{{FAQ_2_QUESTION}}">
+                    <button class="faq-question">{{FAQ_2_QUESTION}}</button>
+                    <div class="faq-answer">
+                        <p>{{FAQ_2_ANSWER}}</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-optional="{{FAQ_3_QUESTION}}">
+                    <button class="faq-question">{{FAQ_3_QUESTION}}</button>
+                    <div class="faq-answer">
+                        <p>{{FAQ_3_ANSWER}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section section-newsletter" data-optional="{{NEWSLETTER_FORM_ACTION}}">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Stay updated</h2>
+                <p>Get insights on AI automation and orchestration delivered to your inbox.</p>
+                <form action="{{NEWSLETTER_FORM_ACTION}}" method="POST" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section section-cta-block">
         <div class="container">
-            <h2>Ready to Transform Your Customer Lifecycle?</h2>
-            <p>Let's discuss how I can help you acquire, engage, and retain more customers.</p>
-            <div class="cta-buttons">
+            <h2 class="section-title">Ready to get started?</h2>
+            <div class="content-narrow">
+                <p>I work with a small number of clients at any one time. The first step is a brief conversation to understand your situation and whether there's a fit.</p>
                 <a href="contact.html" class="btn btn-primary">Book a Call</a>
                 <a href="client-intake.html" class="btn btn-secondary">Start a Project Brief</a>
             </div>
@@ -595,7 +271,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Samuel Kambasha</span>
-                    <p>15+ years in Banking and Fintech. Customer lifecycle management expert helping organisations acquire, engage, and retain customers.</p>
+                    <p>AI that ships. AI orchestration and automation design for Fintech, Banking, and professional services.</p>
                 </div>
                 <div class="footer-links">
                     <a href="services.html">Services</a>
@@ -604,8 +280,20 @@
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/samuel-kambasha-86b4a471/" aria-label="LinkedIn" class="social-link">
+                    <a href="https://www.linkedin.com/in/samuel-kambasha-86b4a471/" data-optional="https://www.linkedin.com/in/samuel-kambasha-86b4a471/" aria-label="LinkedIn" class="social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="{{TWITTER_URL}}" data-optional="{{TWITTER_URL}}" aria-label="Twitter" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="{{GITHUB_URL}}" data-optional="{{GITHUB_URL}}" aria-label="GitHub" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="{{YOUTUBE_URL}}" data-optional="{{YOUTUBE_URL}}" aria-label="YouTube" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="{{PODCAST_URL}}" data-optional="{{PODCAST_URL}}" aria-label="Podcast" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm3.6 17.472c0 .528-.432.96-.96.96h-5.28c-.528 0-.96-.432-.96-.96v-1.92c0-.528.432-.96.96-.96h5.28c.528 0 .96.432.96.96v1.92zm.624-5.088c-.24.816-.72 1.536-1.392 2.064-.336.264-.744.408-1.176.408H10.32c-.432 0-.84-.144-1.176-.408-.672-.528-1.152-1.248-1.392-2.064-.24-.816-.168-1.68.216-2.448.384-.768 1.008-1.368 1.8-1.728.336-.144.696-.216 1.056-.216h2.352c.36 0 .72.072 1.056.216.792.36 1.416.96 1.8 1.728.384.768.456 1.632.216 2.448z"/></svg>
                     </a>
                 </div>
             </div>
@@ -618,139 +306,5 @@
 
     <script src="script.js"></script>
     <script src="chatbot.js"></script>
-    <script>
-        const stageData = {
-            1: {
-                name: "Awareness",
-                description: "Building brand recognition and attracting potential customers through targeted outreach and AI-driven marketing intelligence.",
-                services: [
-                    { title: "AI-Powered Lead Scoring", desc: "Predictive models to identify high-value prospects" },
-                    { title: "Content Personalization", desc: "Dynamic content targeting based on customer segments" },
-                    { title: "Market Analytics", desc: "Competitive intelligence and market opportunity analysis" },
-                    { title: "Digital Campaign Optimization", desc: "ML-driven A/B testing and channel optimization" }
-                ],
-                metrics: [
-                    { value: "3.2x", label: "Lead Quality" },
-                    { value: "-45%", label: "Acquisition Cost" },
-                    { value: "78%", label: "Target Reach" }
-                ]
-            },
-            2: {
-                name: "Acquisition",
-                description: "Streamlining customer onboarding with intelligent automation and frictionless digital experiences.",
-                services: [
-                    { title: "Digital Onboarding Automation", desc: "End-to-end automated KYC/AML workflows" },
-                    { title: "Document Processing", desc: "AI extraction and validation of customer documents" },
-                    { title: "Risk Assessment Models", desc: "Real-time credit and fraud risk evaluation" },
-                    { title: "Conversational AI", desc: "24/7 chatbot support for application assistance" }
-                ],
-                metrics: [
-                    { value: "-70%", label: "Onboarding Time" },
-                    { value: "95%", label: "Doc Accuracy" },
-                    { value: "4.5x", label: "Throughput" }
-                ]
-            },
-            3: {
-                name: "Activation",
-                description: "Ensuring new customers quickly realize value through guided experiences and proactive engagement.",
-                services: [
-                    { title: "Personalized Onboarding Journeys", desc: "Tailored activation paths based on customer profile" },
-                    { title: "Smart Notifications", desc: "AI-timed prompts to drive first transactions" },
-                    { title: "Product Recommendations", desc: "Next-best-action suggestions for new users" },
-                    { title: "Success Milestone Tracking", desc: "Automated monitoring of activation KPIs" }
-                ],
-                metrics: [
-                    { value: "85%", label: "First Transaction" },
-                    { value: "12 days", label: "Time to Value" },
-                    { value: "+40%", label: "Feature Adoption" }
-                ]
-            },
-            4: {
-                name: "Engagement",
-                description: "Deepening customer relationships through personalized interactions and proactive value delivery.",
-                services: [
-                    { title: "Behavioral Analytics", desc: "Deep insights into customer usage patterns" },
-                    { title: "Cross-sell/Upsell Intelligence", desc: "AI-driven product recommendations" },
-                    { title: "Omnichannel Orchestration", desc: "Unified experience across all touchpoints" },
-                    { title: "Predictive Servicing", desc: "Anticipate needs before customers ask" }
-                ],
-                metrics: [
-                    { value: "2.8x", label: "Products/Customer" },
-                    { value: "+65%", label: "Engagement" },
-                    { value: "+35%", label: "Revenue" }
-                ]
-            },
-            5: {
-                name: "Retention",
-                description: "Proactively identifying and addressing churn risks to maximize customer lifetime value.",
-                services: [
-                    { title: "Churn Prediction Models", desc: "Early warning system for at-risk customers" },
-                    { title: "Retention Campaigns", desc: "Automated personalized win-back strategies" },
-                    { title: "Customer Health Scoring", desc: "Real-time relationship health monitoring" },
-                    { title: "Proactive Issue Resolution", desc: "AI-detected problems resolved before escalation" }
-                ],
-                metrics: [
-                    { value: "-25%", label: "Churn Rate" },
-                    { value: "3.5x", label: "Lifetime Value" },
-                    { value: "92%", label: "Retention" }
-                ]
-            },
-            6: {
-                name: "Advocacy",
-                description: "Transforming satisfied customers into brand advocates who drive organic growth.",
-                services: [
-                    { title: "NPS & Sentiment Analysis", desc: "Real-time customer satisfaction tracking" },
-                    { title: "Referral Program Optimization", desc: "AI-powered incentive personalization" },
-                    { title: "Review & Testimonial Mining", desc: "Automated collection and analysis of feedback" },
-                    { title: "Community Engagement", desc: "Identify and nurture brand champions" }
-                ],
-                metrics: [
-                    { value: "+45", label: "NPS Score" },
-                    { value: "30%", label: "Referral Growth" },
-                    { value: "4.8/5", label: "Satisfaction" }
-                ]
-            }
-        };
-
-        function showStageDetails(stageNum) {
-            const data = stageData[stageNum];
-            const details = document.getElementById('stageDetails');
-
-            document.querySelector('.stage-number').textContent = stageNum;
-            document.getElementById('stageName').textContent = data.name;
-            document.getElementById('stageDescription').textContent = data.description;
-
-            document.getElementById('servicesGrid').innerHTML = data.services.map(s => `
-                <div class="service-item">
-                    <h4>${s.title}</h4>
-                    <p>${s.desc}</p>
-                </div>
-            `).join('');
-
-            document.getElementById('metricsRow').innerHTML = data.metrics.map(m => `
-                <div class="metric">
-                    <div class="metric-value">${m.value}</div>
-                    <div class="metric-label">${m.label}</div>
-                </div>
-            `).join('');
-
-            details.classList.add('visible');
-
-            document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(el => {
-                el.classList.remove('active');
-                if (el.dataset.stage === String(stageNum)) {
-                    el.classList.add('active');
-                }
-            });
-        }
-
-        document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(stage => {
-            stage.addEventListener('click', () => {
-                showStageDetails(parseInt(stage.dataset.stage));
-            });
-        });
-
-        showStageDetails(1);
-    </script>
 </body>
 </html>
