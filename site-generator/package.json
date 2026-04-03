@@ -1,0 +1,24 @@
+{
+  "name": "consultant-site-generator",
+  "version": "1.0.0",
+  "description": "Generate professional consultant websites from templates",
+  "main": "index.js",
+  "bin": {
+    "create-site": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "node bin/cli.js --help"
+  },
+  "keywords": [
+    "website",
+    "generator",
+    "consultant",
+    "template",
+    "landing-page"
+  ],
+  "author": "Samuel Kambasha",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

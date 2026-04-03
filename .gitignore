@@ -1,0 +1,16 @@
+# Netlify
+.netlify/
+
+# Temp files
+tmpclaude-*
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/

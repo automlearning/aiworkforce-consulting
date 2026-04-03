@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{SERVICE_1_NAME}}, {{SERVICE_2_NAME}}, and {{SERVICE_3_NAME}} — consulting services for {{TARGET_AUDIENCE}}.">
+    <title>Services | {{CONSULTANT_NAME}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">{{CONSULTANT_NAME}}</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Three ways to work together</h1>
+            <p class="lead">Each engagement is designed to deliver a clear outcome. I work with {{TARGET_AUDIENCE}} who need focused, expert support.</p>
+        </div>
+    </header>
+
+    <!-- Service 1 -->
+    <section class="service-full">
+        <div class="container">
+            <div class="service-header">
+                <h2>{{SERVICE_1_NAME}}</h2>
+                <span class="duration">{{SERVICE_1_DURATION}}</span>
+            </div>
+            <div class="service-body">
+                <h3>What it is</h3>
+                <p>{{SERVICE_1_DESCRIPTION}}</p>
+
+                <h3>Who it's for</h3>
+                <p>{{TARGET_AUDIENCE}} who need clarity and measurable results.</p>
+
+                <div class="service-cta">
+                    <a href="contact.html" class="btn btn-primary">Discuss {{SERVICE_1_NAME}}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2 -->
+    <section class="service-full">
+        <div class="container">
+            <div class="service-header">
+                <h2>{{SERVICE_2_NAME}}</h2>
+                <span class="duration">{{SERVICE_2_DURATION}}</span>
+            </div>
+            <div class="service-body">
+                <h3>What it is</h3>
+                <p>{{SERVICE_2_DESCRIPTION}}</p>
+
+                <h3>Who it's for</h3>
+                <p>{{TARGET_AUDIENCE}} who need expert guidance and a clear path forward.</p>
+
+                <div class="service-cta">
+                    <a href="contact.html" class="btn btn-primary">Discuss {{SERVICE_2_NAME}}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3 -->
+    <section class="service-full">
+        <div class="container">
+            <div class="service-header">
+                <h2>{{SERVICE_3_NAME}}</h2>
+                <span class="duration">{{SERVICE_3_DURATION}}</span>
+            </div>
+            <div class="service-body">
+                <h3>What it is</h3>
+                <p>{{SERVICE_3_DESCRIPTION}}</p>
+
+                <h3>Who it's for</h3>
+                <p>{{TARGET_AUDIENCE}} who want strategic support and a clear roadmap.</p>
+
+                <div class="service-cta">
+                    <a href="contact.html" class="btn btn-primary">Discuss {{SERVICE_3_NAME}}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Engage Me Section -->
+    <section class="section section-cta-block">
+        <div class="container">
+            <h2 class="section-title">Why work with me</h2>
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <h3>I understand your world</h3>
+                    <p>With {{YEARS_EXPERIENCE}} in {{INDUSTRY}}, I know the pressures you face and what stakeholders need to see.</p>
+                </div>
+                <div class="credential-item">
+                    <h3>I focus on outcomes</h3>
+                    <p>Every engagement is designed to produce results that matter—not reports that sit unread.</p>
+                </div>
+                <div class="credential-item">
+                    <h3>I work at senior level</h3>
+                    <p>I engage directly with the stakeholders who control decisions. The work is designed to land with them.</p>
+                </div>
+                <div class="credential-item">
+                    <h3>I'm selective</h3>
+                    <p>I take on a small number of clients at any time. This means you get focused attention.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">{{CONSULTANT_NAME}}</span>
+                    <p>{{SPECIALISATION}} for {{INDUSTRY}}.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 {{CONSULTANT_NAME}}. All rights reserved.</p>
+                <p>{{LOCATION}}</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(npx serve -l 3000)",
+      "Bash(copy:*)",
+      "Bash(copy \"C:\\\\Users\\\\life6\\\\OneDrive\\\\50. Claude Code\\\\01. AiworkforceLandingPage\\\\script.js\" \"C:\\\\Users\\\\life6\\\\OneDrive\\\\50. Claude Code\\\\01. AiworkforceLandingPage\\\\templates\\\\premium-consultant\\\\script.js\")",
+      "Bash(npm install:*)",
+      "Bash(create-site:*)",
+      "Bash(npx serve -l 3001)",
+      "Bash(curl:*)",
+      "Bash(node bin/cli.js:*)",
+      "Bash(start http://localhost:49176)",
+      "Bash(start http://localhost:3001)",
+      "Bash(start http://localhost:3002/services.html)",
+      "Bash(start \"\" \"C:\\\\Users\\\\life6\\\\OneDrive\\\\50. Claude Code\\\\01. AiworkforceLandingPage\\\\demo-site\\\\about.html\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\life6\\\\OneDrive\\\\50. Claude Code\\\\01. AiworkforceLandingPage\\\\demo-site\\\\services.html\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\life6\\\\OneDrive\\\\50. Claude Code\\\\01. AiworkforceLandingPage\\\\my-site\\\\index.html\")",
+      "Bash(netlify --version:*)",
+      "Bash(npx netlify:*)",
+      "Bash(start \"\" \"https://aiworkforce-consulting.netlify.app\")",
+      "Bash(start \"\" \"https://app.netlify.com/projects/aiworkforce-consulting/domain-management\")",
+      "Bash(nslookup:*)",
+      "Bash(netlify deploy:*)",
+      "Bash(netlify link:*)"
+    ]
+  }
+}

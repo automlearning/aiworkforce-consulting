@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start a conversation with {{CONSULTANT_NAME}}. Book a 30-minute call to discuss your needs.">
+    <title>Contact | {{CONSULTANT_NAME}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">{{CONSULTANT_NAME}}</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Start a conversation</h1>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <h2>Let's discuss your situation</h2>
+                    <p>If you're looking for expert support in {{INDUSTRY}}, I'd welcome a conversation.</p>
+                    <p>The first step is a 30-minute call to understand your situation and explore whether there's a fit.</p>
+                    <p>No pitch. No obligation. Just a direct conversation about what you're trying to achieve.</p>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="organisation">Organisation</label>
+                            <input type="text" id="organisation" name="organisation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <input type="text" id="role" name="role" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">What are you looking to achieve? <span class="optional">(optional)</span></label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Request a Call</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Contact -->
+    <section class="section section-help">
+        <div class="container">
+            <div class="content-narrow" style="text-align: center;">
+                <h2 class="section-title">Prefer email?</h2>
+                <p>You can reach me directly at <a href="mailto:{{EMAIL}}" style="color: var(--color-highlight); text-decoration: underline;">{{EMAIL}}</a></p>
+                <p style="margin-top: var(--space-md);">
+                    <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer" style="color: var(--color-text-light);">Connect on LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">{{CONSULTANT_NAME}}</span>
+                    <p>{{SPECIALISATION}} for {{INDUSTRY}}.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 {{CONSULTANT_NAME}}. All rights reserved.</p>
+                <p>{{LOCATION}}</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

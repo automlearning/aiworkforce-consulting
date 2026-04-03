@@ -1,0 +1,555 @@
+{
+  "templateName": "Full Custom",
+  "description": "A fully customizable consultant website with optional sections, branding controls, and lead generation features.",
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "CONSULTANT_NAME",
+      "question": "What is your full name?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Samuel Kambasha"
+    },
+    {
+      "id": "PROFILE_PHOTO",
+      "question": "Profile photo filename (e.g., photo.png)",
+      "type": "text",
+      "required": false,
+      "placeholder": "profile.png"
+    },
+    {
+      "id": "SITE_TITLE",
+      "question": "What should the browser tab title be?",
+      "type": "text",
+      "required": false,
+      "placeholder": "Samuel Kambasha | AI Orchestration"
+    },
+    {
+      "id": "LOGO_TEXT",
+      "question": "Logo text (leave blank to use your name)",
+      "type": "text",
+      "required": false,
+      "placeholder": "SK Consulting"
+    },
+    {
+      "id": "HEADLINE",
+      "question": "What is your main headline?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Applied AI orchestration for modern businesses."
+    },
+    {
+      "id": "SUBHEADLINE",
+      "question": "What is your subheadline?",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Practical AI automations and agent orchestration for small and mid-sized businesses."
+    },
+    {
+      "id": "HERO_CTA_TEXT",
+      "question": "Hero button text",
+      "type": "text",
+      "required": false,
+      "placeholder": "Start a Conversation",
+      "default": "Start a Conversation"
+    },
+    {
+      "id": "HERO_CTA_URL",
+      "question": "Hero button link (use #contact for contact page, or a Calendly URL)",
+      "type": "text",
+      "required": false,
+      "placeholder": "contact.html",
+      "default": "contact.html"
+    },
+    {
+      "id": "TARGET_AUDIENCE",
+      "question": "Who is your target audience?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Small to medium-sized businesses and growing teams"
+    },
+    {
+      "id": "INDUSTRY",
+      "question": "What industries do you serve?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Fintech, health, professional services"
+    },
+    {
+      "id": "LOCATION",
+      "question": "Where are you based?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Melbourne, Australia"
+    },
+    {
+      "id": "YEARS_EXPERIENCE",
+      "question": "How many years of experience?",
+      "type": "text",
+      "required": false,
+      "placeholder": "15+ years"
+    },
+    {
+      "id": "SPECIALISATION",
+      "question": "What is your specialisation?",
+      "type": "text",
+      "required": true,
+      "placeholder": "AI orchestration, agent workflows, automation design"
+    },
+    {
+      "id": "PRIMARY_COLOR",
+      "question": "Primary brand color (hex code)",
+      "type": "text",
+      "required": false,
+      "placeholder": "#1a365d",
+      "default": "#1a365d"
+    },
+    {
+      "id": "SECONDARY_COLOR",
+      "question": "Secondary brand color (hex code)",
+      "type": "text",
+      "required": false,
+      "placeholder": "#2d5a87",
+      "default": "#2d5a87"
+    },
+    {
+      "id": "ACCENT_COLOR",
+      "question": "Accent color (hex code)",
+      "type": "text",
+      "required": false,
+      "placeholder": "#e67e22",
+      "default": "#e67e22"
+    },
+    {
+      "id": "HEADING_FONT",
+      "question": "Heading font (Google Fonts name)",
+      "type": "text",
+      "required": false,
+      "placeholder": "Newsreader",
+      "default": "Newsreader"
+    },
+    {
+      "id": "BODY_FONT",
+      "question": "Body font (Google Fonts name)",
+      "type": "text",
+      "required": false,
+      "placeholder": "Inter",
+      "default": "Inter"
+    },
+    {
+      "id": "PROBLEM_STATEMENT",
+      "question": "What problem do your clients face? (2-3 sentences)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Many businesses know AI could help, but don't know where to start. They waste time on tools that don't integrate, or projects that never ship."
+    },
+    {
+      "id": "SOLUTION_STATEMENT",
+      "question": "How do you solve it? (2-3 sentences)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "I help you identify the highest-impact opportunities, then design and build AI automations that actually work with your existing systems."
+    },
+    {
+      "id": "SERVICE_1_NAME",
+      "question": "Service 1 name",
+      "type": "text",
+      "required": true,
+      "placeholder": "AI Orchestration Discovery & Design"
+    },
+    {
+      "id": "SERVICE_1_DESCRIPTION",
+      "question": "Service 1 description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "A short engagement to identify high-impact automation opportunities."
+    },
+    {
+      "id": "SERVICE_1_DURATION",
+      "question": "Service 1 duration",
+      "type": "text",
+      "required": false,
+      "placeholder": "1-2 weeks"
+    },
+    {
+      "id": "SERVICE_1_DELIVERABLES",
+      "question": "Service 1 deliverables (use | to separate items)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Document Q&A systems|Voice-enabled assistants|Query interfaces"
+    },
+    {
+      "id": "SERVICE_1_PRICE",
+      "question": "Service 1 price (leave blank to hide)",
+      "type": "text",
+      "required": false,
+      "placeholder": "From $5,000"
+    },
+    {
+      "id": "SERVICE_2_NAME",
+      "question": "Service 2 name",
+      "type": "text",
+      "required": true,
+      "placeholder": "Agent Orchestration & Workflow Implementation"
+    },
+    {
+      "id": "SERVICE_2_DESCRIPTION",
+      "question": "Service 2 description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Design and build practical AI agents integrated into your existing tools."
+    },
+    {
+      "id": "SERVICE_2_DURATION",
+      "question": "Service 2 duration",
+      "type": "text",
+      "required": false,
+      "placeholder": "3-6 weeks"
+    },
+    {
+      "id": "SERVICE_2_DELIVERABLES",
+      "question": "Service 2 deliverables (use | to separate items)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Data pipelines|Integration workflows|Monitoring systems"
+    },
+    {
+      "id": "SERVICE_2_PRICE",
+      "question": "Service 2 price (leave blank to hide)",
+      "type": "text",
+      "required": false,
+      "placeholder": "From $15,000"
+    },
+    {
+      "id": "SERVICE_3_NAME",
+      "question": "Service 3 name",
+      "type": "text",
+      "required": true,
+      "placeholder": "AI Orchestration Optimisation & Scaling"
+    },
+    {
+      "id": "SERVICE_3_DESCRIPTION",
+      "question": "Service 3 description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Harden, optimise, and extend your AI automations as you grow."
+    },
+    {
+      "id": "SERVICE_3_DURATION",
+      "question": "Service 3 duration",
+      "type": "text",
+      "required": false,
+      "placeholder": "4-8 weeks"
+    },
+    {
+      "id": "SERVICE_3_DELIVERABLES",
+      "question": "Service 3 deliverables (use | to separate items)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Predictive models|Forecasts|Measurement frameworks"
+    },
+    {
+      "id": "SERVICE_3_PRICE",
+      "question": "Service 3 price (leave blank to hide)",
+      "type": "text",
+      "required": false,
+      "placeholder": "From $10,000"
+    },
+    {
+      "id": "SHOW_PRICING",
+      "question": "Show pricing on services? (yes/no)",
+      "type": "text",
+      "required": false,
+      "placeholder": "no",
+      "default": "no"
+    },
+    {
+      "id": "ABOUT_INTRO",
+      "question": "About page introduction (2-3 sentences about you)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "I help businesses turn AI hype into practical, working systems."
+    },
+    {
+      "id": "ABOUT_BACKGROUND",
+      "question": "Your professional background",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Former data scientist at XYZ Corp with deep expertise in machine learning and automation."
+    },
+    {
+      "id": "ABOUT_APPROACH",
+      "question": "Your approach/philosophy",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "I believe in building AI that ships—practical solutions that integrate with your existing workflows."
+    },
+    {
+      "id": "CREDENTIAL_1",
+      "question": "Credential/certification 1 (leave blank to hide)",
+      "type": "text",
+      "required": false,
+      "placeholder": "AWS Certified Solutions Architect"
+    },
+    {
+      "id": "CREDENTIAL_2",
+      "question": "Credential/certification 2",
+      "type": "text",
+      "required": false,
+      "placeholder": "Google Cloud Professional"
+    },
+    {
+      "id": "CREDENTIAL_3",
+      "question": "Credential/certification 3",
+      "type": "text",
+      "required": false,
+      "placeholder": "Certified Scrum Master"
+    },
+    {
+      "id": "STAT_1_NUMBER",
+      "question": "Stat 1 number (e.g., 50+)",
+      "type": "text",
+      "required": false,
+      "placeholder": "50+"
+    },
+    {
+      "id": "STAT_1_LABEL",
+      "question": "Stat 1 label (e.g., Projects Delivered)",
+      "type": "text",
+      "required": false,
+      "placeholder": "Projects Delivered"
+    },
+    {
+      "id": "STAT_2_NUMBER",
+      "question": "Stat 2 number",
+      "type": "text",
+      "required": false,
+      "placeholder": "$2M+"
+    },
+    {
+      "id": "STAT_2_LABEL",
+      "question": "Stat 2 label",
+      "type": "text",
+      "required": false,
+      "placeholder": "Client Savings Generated"
+    },
+    {
+      "id": "STAT_3_NUMBER",
+      "question": "Stat 3 number",
+      "type": "text",
+      "required": false,
+      "placeholder": "15+"
+    },
+    {
+      "id": "STAT_3_LABEL",
+      "question": "Stat 3 label",
+      "type": "text",
+      "required": false,
+      "placeholder": "Years Experience"
+    },
+    {
+      "id": "TESTIMONIAL_1_TEXT",
+      "question": "Testimonial 1 quote (leave blank to hide testimonials section)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Samuel transformed how we think about automation. The ROI was clear within weeks."
+    },
+    {
+      "id": "TESTIMONIAL_1_AUTHOR",
+      "question": "Testimonial 1 author name",
+      "type": "text",
+      "required": false,
+      "placeholder": "Jane Smith"
+    },
+    {
+      "id": "TESTIMONIAL_1_ROLE",
+      "question": "Testimonial 1 author role/company",
+      "type": "text",
+      "required": false,
+      "placeholder": "CEO, TechStartup Inc"
+    },
+    {
+      "id": "TESTIMONIAL_2_TEXT",
+      "question": "Testimonial 2 quote",
+      "type": "textarea",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "TESTIMONIAL_2_AUTHOR",
+      "question": "Testimonial 2 author name",
+      "type": "text",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "TESTIMONIAL_2_ROLE",
+      "question": "Testimonial 2 author role/company",
+      "type": "text",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "TESTIMONIAL_3_TEXT",
+      "question": "Testimonial 3 quote",
+      "type": "textarea",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "TESTIMONIAL_3_AUTHOR",
+      "question": "Testimonial 3 author name",
+      "type": "text",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "TESTIMONIAL_3_ROLE",
+      "question": "Testimonial 3 author role/company",
+      "type": "text",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "CLIENT_LOGOS",
+      "question": "Client logo URLs (comma-separated, leave blank to hide)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "FAQ_1_QUESTION",
+      "question": "FAQ 1 question (leave blank to hide FAQ section)",
+      "type": "text",
+      "required": false,
+      "placeholder": "How long does a typical engagement take?"
+    },
+    {
+      "id": "FAQ_1_ANSWER",
+      "question": "FAQ 1 answer",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Most projects range from 2-8 weeks depending on scope and complexity."
+    },
+    {
+      "id": "FAQ_2_QUESTION",
+      "question": "FAQ 2 question",
+      "type": "text",
+      "required": false,
+      "placeholder": "What industries do you work with?"
+    },
+    {
+      "id": "FAQ_2_ANSWER",
+      "question": "FAQ 2 answer",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "I specialize in fintech, healthcare, and professional services, but the principles apply broadly."
+    },
+    {
+      "id": "FAQ_3_QUESTION",
+      "question": "FAQ 3 question",
+      "type": "text",
+      "required": false,
+      "placeholder": "Do you offer ongoing support?"
+    },
+    {
+      "id": "FAQ_3_ANSWER",
+      "question": "FAQ 3 answer",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Yes, I offer retainer arrangements for clients who need ongoing optimisation and support."
+    },
+    {
+      "id": "EMAIL",
+      "question": "Contact email",
+      "type": "email",
+      "required": true,
+      "placeholder": "sam@aiworkforce.au"
+    },
+    {
+      "id": "PHONE",
+      "question": "Phone number (leave blank to hide)",
+      "type": "text",
+      "required": false,
+      "placeholder": "+61 400 123 456"
+    },
+    {
+      "id": "BOOKING_URL",
+      "question": "Calendly/Cal.com booking URL (leave blank for contact form only)",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://calendly.com/yourname/30min"
+    },
+    {
+      "id": "LINKEDIN_URL",
+      "question": "LinkedIn URL",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://linkedin.com/in/yourprofile"
+    },
+    {
+      "id": "TWITTER_URL",
+      "question": "Twitter/X URL",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://twitter.com/yourhandle"
+    },
+    {
+      "id": "GITHUB_URL",
+      "question": "GitHub URL",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://github.com/yourhandle"
+    },
+    {
+      "id": "YOUTUBE_URL",
+      "question": "YouTube URL",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://youtube.com/@yourchannel"
+    },
+    {
+      "id": "PODCAST_URL",
+      "question": "Podcast URL",
+      "type": "url",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "NEWSLETTER_FORM_ACTION",
+      "question": "Newsletter form action URL (Mailchimp/ConvertKit embed URL, leave blank to hide)",
+      "type": "url",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "META_DESCRIPTION",
+      "question": "SEO meta description (leave blank to auto-generate from subheadline)",
+      "type": "textarea",
+      "required": false,
+      "placeholder": ""
+    },
+    {
+      "id": "GA_TRACKING_ID",
+      "question": "Google Analytics tracking ID (leave blank to disable)",
+      "type": "text",
+      "required": false,
+      "placeholder": "G-XXXXXXXXXX"
+    },
+    {
+      "id": "FOOTER_TAGLINE",
+      "question": "Footer tagline",
+      "type": "text",
+      "required": false,
+      "placeholder": "Practical AI for businesses that ship."
+    }
+  ],
+  "files": [
+    "index.html",
+    "services.html",
+    "about.html",
+    "contact.html",
+    "styles.css",
+    "script.js"
+  ]
+}

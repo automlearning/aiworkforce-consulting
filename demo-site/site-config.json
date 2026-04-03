@@ -1,0 +1,21 @@
+{
+  "CONSULTANT_NAME": "Samuel Kambasha",
+  "HEADLINE": "Applied AI orchestration for modern businesses.",
+  "SUBHEADLINE": "Practical AI automations and agent orchestration for small and mid-sized businesses—built to ship, built to deliver ROI.",
+  "TARGET_AUDIENCE": "Small to medium-sized businesses and growing teams",
+  "INDUSTRY": "Fintech, health, professional services",
+  "LOCATION": "Melbourne, Australia",
+  "EMAIL": "sam@aiworkforce.au",
+  "LINKEDIN_URL": "https://www.linkedin.com/in/samuel-kambasha-86b4a471/",
+  "SERVICE_1_NAME": "AI Orchestration Discovery & Design",
+  "SERVICE_1_DESCRIPTION": "A short engagement to identify high-impact automation opportunities, design agent orchestration flows, and define a clear, ROI-driven AI implementation plan.",
+  "SERVICE_1_DURATION": "1–2 weeks",
+  "SERVICE_2_NAME": "Agent Orchestration & Workflow Implementation",
+  "SERVICE_2_DESCRIPTION": "Design and build practical AI agents and orchestrated workflows integrated into your existing tools (CRM, email, spreadsheets, internal systems) to remove manual work and improve speed and consistency.",
+  "SERVICE_2_DURATION": "3–6 weeks",
+  "SERVICE_3_NAME": "AI Orchestration Optimisation & Scaling",
+  "SERVICE_3_DESCRIPTION": "Harden, optimise, and extend orchestrated AI automations—improving reliability, governance, and ROI as your business grows.",
+  "SERVICE_3_DURATION": "4–8 weeks",
+  "YEARS_EXPERIENCE": "15+ years",
+  "SPECIALISATION": "AI orchestration, agent workflows, automation design, and applied analytics for small and mid-sized businesses"
+}

@@ -1,0 +1,148 @@
+{
+  "templateName": "Premium Consultant",
+  "description": "A premium, understated website template for solo consultants and advisors targeting executive clients.",
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "CONSULTANT_NAME",
+      "question": "What is your full name?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Samuel Kambasha"
+    },
+    {
+      "id": "HEADLINE",
+      "question": "What is your main headline/tagline?",
+      "type": "text",
+      "required": true,
+      "placeholder": "From Analytics Spend to Boardroom Evidence"
+    },
+    {
+      "id": "SUBHEADLINE",
+      "question": "What is your subheadline? (One sentence describing who you help and the outcome)",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "I help banking and financial services leaders prove the commercial value of their data investments—so they can secure funding, scale what works, and stop what doesn't."
+    },
+    {
+      "id": "TARGET_AUDIENCE",
+      "question": "Who is your target audience?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Chief Data Officers and senior data leaders in banking and financial services"
+    },
+    {
+      "id": "INDUSTRY",
+      "question": "What industry do you serve?",
+      "type": "text",
+      "required": true,
+      "placeholder": "banking and financial services"
+    },
+    {
+      "id": "LOCATION",
+      "question": "Where are you based?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Sydney, Australia"
+    },
+    {
+      "id": "EMAIL",
+      "question": "What is your contact email?",
+      "type": "email",
+      "required": true,
+      "placeholder": "hello@example.com"
+    },
+    {
+      "id": "LINKEDIN_URL",
+      "question": "What is your LinkedIn profile URL?",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://www.linkedin.com/in/yourprofile"
+    },
+    {
+      "id": "SERVICE_1_NAME",
+      "question": "What is your first service called?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Analytics ROI Audit"
+    },
+    {
+      "id": "SERVICE_1_DESCRIPTION",
+      "question": "Describe your first service (1-2 sentences)",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "A structured review of your current analytics initiatives, designed to quantify their financial impact and identify where value is being captured—or lost."
+    },
+    {
+      "id": "SERVICE_1_DURATION",
+      "question": "What is the duration of your first service?",
+      "type": "text",
+      "required": true,
+      "placeholder": "4–6 weeks"
+    },
+    {
+      "id": "SERVICE_2_NAME",
+      "question": "What is your second service called?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Credit Model Commercialisation"
+    },
+    {
+      "id": "SERVICE_2_DESCRIPTION",
+      "question": "Describe your second service (1-2 sentences)",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Translate credit risk model improvements into commercial outcomes—and build the business case for executive approval."
+    },
+    {
+      "id": "SERVICE_2_DURATION",
+      "question": "What is the duration of your second service?",
+      "type": "text",
+      "required": true,
+      "placeholder": "6–8 weeks"
+    },
+    {
+      "id": "SERVICE_3_NAME",
+      "question": "What is your third service called?",
+      "type": "text",
+      "required": true,
+      "placeholder": "90-Day Analytics Roadmap"
+    },
+    {
+      "id": "SERVICE_3_DESCRIPTION",
+      "question": "Describe your third service (1-2 sentences)",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "A strategic planning engagement that delivers a prioritised, fundable analytics roadmap with executive sponsorship strategy."
+    },
+    {
+      "id": "SERVICE_3_DURATION",
+      "question": "What is the duration of your third service?",
+      "type": "text",
+      "required": true,
+      "placeholder": "6–8 weeks"
+    },
+    {
+      "id": "YEARS_EXPERIENCE",
+      "question": "How many years of experience do you have?",
+      "type": "text",
+      "required": true,
+      "placeholder": "15 years"
+    },
+    {
+      "id": "SPECIALISATION",
+      "question": "What is your area of specialisation?",
+      "type": "text",
+      "required": true,
+      "placeholder": "Analytics strategy and commercial impact"
+    }
+  ],
+  "files": [
+    "index.html",
+    "services.html",
+    "about.html",
+    "contact.html",
+    "styles.css",
+    "script.js"
+  ]
+}
