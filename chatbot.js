@@ -20,6 +20,11 @@
             </div>
             <div class="chatbot-messages">
                 <div class="chatbot-message bot">Hi! I'm Samuel's AI assistant. I can help you learn about AI orchestration and automation services. What would you like to know?</div>
+                <div class="chatbot-quick-actions">
+                    <button class="chatbot-quick-btn" data-message="What services do you offer?">Our Services</button>
+                    <button class="chatbot-quick-btn" data-message="I want to start a project">Start a Project</button>
+                    <button class="chatbot-quick-btn" data-message="How can I book a call?">Book a Call</button>
+                </div>
             </div>
             <div class="chatbot-typing">
                 <span></span><span></span><span></span>
@@ -90,6 +95,22 @@
     sendBtn.addEventListener('click', function() {
         if (input.value.trim() && !isSending) {
             sendMessage();
+        }
+    });
+
+    // Quick action buttons
+    container.addEventListener('click', function(e) {
+        if (e.target.classList.contains('chatbot-quick-btn')) {
+            const message = e.target.getAttribute('data-message');
+            if (message && !isSending) {
+                input.value = message;
+                sendMessage();
+                // Hide quick actions after use
+                const quickActions = container.querySelector('.chatbot-quick-actions');
+                if (quickActions) {
+                    quickActions.style.display = 'none';
+                }
+            }
         }
     });
 
