@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Lifecycle Management | Samuel Kambasha</title>
-    <!-- v8 CSS-only mobile -->
-    <link rel="stylesheet" href="css/themes/default.css?v=8" id="theme-css">
-    <link rel="stylesheet" href="css/base.css?v=8">
+    <!-- v9 no-js debug -->
+    <link rel="stylesheet" href="css/themes/default.css?v=9" id="theme-css">
+    <link rel="stylesheet" href="css/base.css?v=9">
     <!-- Mobile styles - CSS only, no JavaScript interference -->
     <style id="mobile-critical">
         /* Desktop: show chart, hide linear */
@@ -744,7 +744,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- script.js removed temporarily to debug mobile issue -->
     <script>
         const stageData = {
             1: {
@@ -955,14 +955,13 @@
             });
         });
 
-        // Show first stage by default (only on desktop)
-        if (!isMobile()) {
-            showStageDetails(1, null);
-        }
+        // DEBUG: Disabled showStageDetails call to test mobile
+        // if (!isMobile()) {
+        //     showStageDetails(1, null);
+        // }
 
-        // Note: Mobile layout is now handled purely by CSS media queries
-        // The applyMobileLayout() function was removed because window.innerWidth
-        // was reporting incorrect values on some mobile devices
+        // Mobile layout handled by CSS media queries only
+        console.log('Screen width:', window.innerWidth, 'isMobile:', isMobile());
     </script>
 </body>
 </html>
