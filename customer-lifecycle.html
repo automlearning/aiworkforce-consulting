@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Lifecycle Management | Samuel Kambasha</title>
-    <!-- v7 debug mobile -->
-    <link rel="stylesheet" href="css/themes/default.css?v=7" id="theme-css">
-    <link rel="stylesheet" href="css/base.css?v=7">
-    <!-- Critical mobile styles - loaded early with highest priority -->
+    <!-- v8 CSS-only mobile -->
+    <link rel="stylesheet" href="css/themes/default.css?v=8" id="theme-css">
+    <link rel="stylesheet" href="css/base.css?v=8">
+    <!-- Mobile styles - CSS only, no JavaScript interference -->
     <style id="mobile-critical">
-        /* DEBUG: Force mobile view on ALL screen sizes temporarily */
-        .lifecycle-chart {
-            display: none !important;
+        /* Desktop: show chart, hide linear */
+        @media screen and (min-width: 769px) {
+            .lifecycle-chart {
+                display: block !important;
+            }
+            .lifecycle-linear {
+                display: none !important;
+            }
         }
-        #lifecycleLinear,
-        .lifecycle-linear {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            background: #ff0000 !important;
-            min-height: 200px !important;
-            padding: 20px !important;
-        }
-        .linear-stage {
-            display: flex !important;
-            background: #00ff00 !important;
-            border: 3px solid #000 !important;
-            padding: 1.25rem !important;
-            margin-bottom: 10px !important;
-            color: #000 !important;
-        }
-        .mobile-center-label {
-            display: block !important;
-            background: blue !important;
-            color: white !important;
-            padding: 20px !important;
+        /* Mobile: hide chart, show linear */
+        @media screen and (max-width: 768px) {
+            .lifecycle-chart {
+                display: none !important;
+            }
+            .lifecycle-linear {
+                display: block !important;
+            }
+            .instructions {
+                display: none !important;
+            }
+            #stageDetails {
+                display: none !important;
+            }
+            .mobile-center-label {
+                display: block !important;
+            }
         }
     </style>
     <style>
@@ -347,24 +347,11 @@
             }
         }
 
-        /* DEBUG: Force linear view to always show */
+        /* Linear mobile view - visibility controlled by media queries in head */
         .lifecycle-linear {
-            display: block !important;
             max-width: 500px;
             margin: 0 auto;
             padding: 0 1rem;
-        }
-
-        .lifecycle-chart {
-            display: none !important;
-        }
-
-        .instructions {
-            display: none !important;
-        }
-
-        #stageDetails {
-            display: none !important;
         }
 
         .linear-stage {
@@ -973,39 +960,9 @@
             showStageDetails(1, null);
         }
 
-        // Force mobile layout with JavaScript (fallback for CSS issues)
-        function applyMobileLayout() {
-            const chart = document.querySelector('.lifecycle-chart');
-            const linear = document.querySelector('.lifecycle-linear');
-            const details = document.getElementById('stageDetails');
-            const instructions = document.querySelector('.instructions');
-            const centerLabel = document.querySelector('.mobile-center-label');
-
-            if (window.innerWidth <= 768) {
-                // Mobile: hide chart, show linear
-                if (chart) {
-                    chart.style.cssText = 'display: none !important; visibility: hidden !important; height: 0 !important;';
-                }
-                if (linear) {
-                    linear.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
-                }
-                if (details) details.style.display = 'none';
-                if (instructions) instructions.style.display = 'none';
-                if (centerLabel) centerLabel.style.display = 'block';
-            } else {
-                // Desktop: show chart, hide linear
-                if (chart) chart.style.cssText = '';
-                if (linear) linear.style.cssText = 'display: none;';
-                if (details) details.style.display = '';
-                if (instructions) instructions.style.display = '';
-                if (centerLabel) centerLabel.style.display = 'none';
-            }
-        }
-
-        // Apply on load, resize, and DOM ready
-        applyMobileLayout();
-        window.addEventListener('resize', applyMobileLayout);
-        document.addEventListener('DOMContentLoaded', applyMobileLayout);
+        // Note: Mobile layout is now handled purely by CSS media queries
+        // The applyMobileLayout() function was removed because window.innerWidth
+        // was reporting incorrect values on some mobile devices
     </script>
 </body>
 </html>
