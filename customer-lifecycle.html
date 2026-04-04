@@ -230,6 +230,27 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
+            .lifecycle-hero {
+                padding: 2rem 0 1rem;
+            }
+
+            .lifecycle-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .lifecycle-hero p {
+                font-size: 0.95rem;
+            }
+
+            .lifecycle-container {
+                padding: 1rem 0 2rem;
+            }
+
+            .instructions {
+                font-size: 0.85rem;
+                margin-bottom: 1.5rem;
+            }
+
             .lifecycle-chart {
                 max-width: 350px;
             }
@@ -250,10 +271,53 @@
             .stage-3 { right: -5%; }
             .stage-5 { left: -5%; }
             .stage-6 { left: 0; }
+
+            .stage-details {
+                padding: 1.25rem;
+                margin-top: 1.5rem;
+            }
+
+            .stage-details h2 {
+                font-size: 1.25rem;
+            }
+
+            .stage-details .description {
+                font-size: 0.9rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .service-item {
+                padding: 1rem;
+            }
+
+            .service-item h4 {
+                font-size: 0.95rem;
+            }
+
+            .service-item p {
+                font-size: 0.8rem;
+            }
+
+            .metrics-row {
+                gap: 1rem;
+                justify-content: space-around;
+            }
+
+            .metric-value {
+                font-size: 1.25rem;
+            }
+
+            .metric-label {
+                font-size: 0.65rem;
+            }
         }
 
-        /* Linear view for very small screens */
-        @media (max-width: 500px) {
+        /* Linear view for small screens */
+        @media (max-width: 600px) {
             .lifecycle-chart {
                 display: none;
             }
@@ -265,17 +329,18 @@
 
         .lifecycle-linear {
             display: none;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .linear-stage {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem;
+            padding: 1rem 1.25rem;
             background: var(--color-surface);
             border: 2px solid var(--color-border);
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.2s ease;
         }
@@ -285,18 +350,20 @@
             border-color: var(--color-primary);
             background: var(--color-primary);
             color: white;
+            transform: scale(1.02);
         }
 
         .linear-stage .number {
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             background: var(--color-primary);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1rem;
             flex-shrink: 0;
         }
 
@@ -305,11 +372,17 @@
             color: var(--color-primary);
         }
 
+        .linear-stage .stage-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
         .linear-connector {
-            width: 2px;
-            height: 20px;
-            background: var(--color-border);
-            margin-left: 1.5rem;
+            width: 3px;
+            height: 24px;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-border));
+            margin-left: 2.1rem;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -375,32 +448,32 @@
             <div class="lifecycle-linear">
                 <div class="linear-stage" data-stage="1">
                     <span class="number">1</span>
-                    <span>Awareness</span>
+                    <span class="stage-name">Awareness</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="2">
                     <span class="number">2</span>
-                    <span>Acquisition</span>
+                    <span class="stage-name">Acquisition</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="3">
                     <span class="number">3</span>
-                    <span>Activation</span>
+                    <span class="stage-name">Activation</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="4">
                     <span class="number">4</span>
-                    <span>Engagement</span>
+                    <span class="stage-name">Engagement</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="5">
                     <span class="number">5</span>
-                    <span>Retention</span>
+                    <span class="stage-name">Retention</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="6">
                     <span class="number">6</span>
-                    <span>Advocacy</span>
+                    <span class="stage-name">Advocacy</span>
                 </div>
             </div>
 
