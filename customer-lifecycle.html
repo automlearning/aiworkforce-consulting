@@ -965,6 +965,35 @@
         if (!isMobile()) {
             showStageDetails(1, null);
         }
+
+        // Force mobile layout with JavaScript (fallback for CSS issues)
+        function applyMobileLayout() {
+            const chart = document.querySelector('.lifecycle-chart');
+            const linear = document.querySelector('.lifecycle-linear');
+            const details = document.getElementById('stageDetails');
+            const instructions = document.querySelector('.instructions');
+            const centerLabel = document.querySelector('.mobile-center-label');
+
+            if (window.innerWidth <= 768) {
+                // Mobile: hide chart, show linear
+                if (chart) chart.style.display = 'none';
+                if (linear) linear.style.display = 'block';
+                if (details) details.style.display = 'none';
+                if (instructions) instructions.style.display = 'none';
+                if (centerLabel) centerLabel.style.display = 'block';
+            } else {
+                // Desktop: show chart, hide linear
+                if (chart) chart.style.display = '';
+                if (linear) linear.style.display = 'none';
+                if (details) details.style.display = '';
+                if (instructions) instructions.style.display = '';
+                if (centerLabel) centerLabel.style.display = 'none';
+            }
+        }
+
+        // Apply on load and resize
+        applyMobileLayout();
+        window.addEventListener('resize', applyMobileLayout);
     </script>
 </body>
 </html>
