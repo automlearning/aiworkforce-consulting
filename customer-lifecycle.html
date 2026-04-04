@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Lifecycle Management | Samuel Kambasha</title>
-    <!-- v4 deploy test -->
+    <!-- v5 mobile fix -->
     <link rel="stylesheet" href="css/themes/default.css" id="theme-css">
     <link rel="stylesheet" href="css/base.css">
+    <!-- Critical mobile styles - loaded early with highest priority -->
+    <style id="mobile-critical">
+        @media screen and (max-width: 768px) {
+            #lifecycleLinear {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            .lifecycle-chart {
+                display: none !important;
+            }
+            .linear-stage {
+                display: flex !important;
+                background: #fff !important;
+                border: 2px solid #e5e7eb !important;
+                border-radius: 16px !important;
+                padding: 1.25rem !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    </style>
     <style>
         .lifecycle-hero {
             padding: 4rem 0 2rem;
@@ -319,20 +340,36 @@
 
         /* Linear mobile view - HIDDEN by default on desktop */
         .lifecycle-linear {
-            display: none !important;
+            display: none;
             max-width: 500px;
             margin: 0 auto;
             padding: 0 1rem;
         }
 
-        /* Mobile: Show linear view, hide circular chart */
-        @media screen and (max-width: 768px) {
+        /* Desktop: Ensure chart shows and linear hides */
+        @media screen and (min-width: 769px) {
             .lifecycle-chart {
+                display: block !important;
+            }
+            .lifecycle-linear {
                 display: none !important;
             }
+        }
 
-            .lifecycle-linear {
+        /* Mobile: Show linear view, hide circular chart */
+        @media screen and (max-width: 768px) {
+            .lifecycle-container .lifecycle-chart {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+            }
+
+            .lifecycle-container .lifecycle-linear {
                 display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                height: auto !important;
             }
 
             .instructions {
@@ -655,9 +692,9 @@
                 </div>
             </div>
 
-            <!-- Linear View (mobile) -->
-            <div class="lifecycle-linear">
-                <div class="mobile-center-label">Customer Lifecycle</div>
+            <!-- Linear View (mobile) - shown on screens 768px and below -->
+            <div class="lifecycle-linear" id="lifecycleLinear">
+                <div class="mobile-center-label" style="background: #1a365d; color: white; padding: 1.5rem; border-radius: 16px; text-align: center; font-weight: 600; margin-bottom: 1rem;">Customer Lifecycle</div>
                 <div class="linear-stage" data-stage="1">
                     <span class="number">1</span>
                     <div class="linear-stage-content">
@@ -977,24 +1014,29 @@
 
             if (window.innerWidth <= 768) {
                 // Mobile: hide chart, show linear
-                if (chart) chart.style.display = 'none';
-                if (linear) linear.style.display = 'block';
+                if (chart) {
+                    chart.style.cssText = 'display: none !important; visibility: hidden !important; height: 0 !important;';
+                }
+                if (linear) {
+                    linear.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
+                }
                 if (details) details.style.display = 'none';
                 if (instructions) instructions.style.display = 'none';
                 if (centerLabel) centerLabel.style.display = 'block';
             } else {
                 // Desktop: show chart, hide linear
-                if (chart) chart.style.display = '';
-                if (linear) linear.style.display = 'none';
+                if (chart) chart.style.cssText = '';
+                if (linear) linear.style.cssText = 'display: none;';
                 if (details) details.style.display = '';
                 if (instructions) instructions.style.display = '';
                 if (centerLabel) centerLabel.style.display = 'none';
             }
         }
 
-        // Apply on load and resize
+        // Apply on load, resize, and DOM ready
         applyMobileLayout();
         window.addEventListener('resize', applyMobileLayout);
+        document.addEventListener('DOMContentLoaded', applyMobileLayout);
     </script>
 </body>
 </html>
