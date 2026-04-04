@@ -316,6 +316,14 @@
             }
         }
 
+        /* Linear mobile view - base styles */
+        .lifecycle-linear {
+            display: none;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
         /* Linear view for small screens */
         @media (max-width: 600px) {
             .lifecycle-chart {
@@ -323,7 +331,7 @@
             }
 
             .lifecycle-linear {
-                display: block !important;
+                display: block;
             }
 
             .instructions {
@@ -342,13 +350,6 @@
             .stage-details h3 {
                 font-size: 1rem;
             }
-        }
-
-        .lifecycle-linear {
-            display: none;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 0 1rem;
         }
 
         .linear-stage {
