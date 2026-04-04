@@ -316,26 +316,26 @@
             }
         }
 
-        /* Linear mobile view - base styles */
+        /* Linear mobile view - HIDDEN by default on desktop */
         .lifecycle-linear {
-            display: none;
+            display: none !important;
             max-width: 500px;
             margin: 0 auto;
             padding: 0 1rem;
         }
 
-        /* Linear view for small screens */
-        @media (max-width: 600px) {
+        /* Mobile: Show linear view, hide circular chart */
+        @media screen and (max-width: 768px) {
             .lifecycle-chart {
-                display: none;
+                display: none !important;
             }
 
             .lifecycle-linear {
-                display: block;
+                display: block !important;
             }
 
             .instructions {
-                display: none;
+                display: none !important;
             }
 
             .lifecycle-hero p {
@@ -349,6 +349,14 @@
 
             .stage-details h3 {
                 font-size: 1rem;
+            }
+
+            .mobile-center-label {
+                display: block !important;
+            }
+
+            #stageDetails {
+                display: none !important;
             }
         }
 
@@ -460,15 +468,9 @@
             font-size: 1.1rem;
         }
 
-        @media (max-width: 600px) {
-            .mobile-center-label {
-                display: block;
-            }
-
-            /* Hide bottom panel on mobile */
-            #stageDetails {
-                display: none !important;
-            }
+        /* Mobile center label - hidden by default */
+        .mobile-center-label {
+            display: none;
         }
 
         /* Inline details for mobile accordion */
