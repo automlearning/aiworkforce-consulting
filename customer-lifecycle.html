@@ -325,37 +325,59 @@
             .lifecycle-linear {
                 display: block !important;
             }
+
+            .instructions {
+                display: none;
+            }
+
+            .lifecycle-hero p {
+                font-size: 0.9rem;
+            }
+
+            .stage-details {
+                border-radius: 16px;
+                margin-top: 1.5rem;
+            }
+
+            .stage-details h3 {
+                font-size: 1rem;
+            }
         }
 
         .lifecycle-linear {
             display: none;
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .linear-stage {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
-            padding: 1rem 1.25rem;
+            padding: 1.25rem;
             background: var(--color-surface);
             border: 2px solid var(--color-border);
-            border-radius: 12px;
+            border-radius: 16px;
             cursor: pointer;
             transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .linear-stage:hover,
         .linear-stage.active {
             border-color: var(--color-primary);
-            background: var(--color-primary);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .linear-stage.active {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark, var(--color-primary)));
             color: white;
-            transform: scale(1.02);
         }
 
         .linear-stage .number {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: var(--color-primary);
             color: white;
             border-radius: 50%;
@@ -363,7 +385,7 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.1rem;
             flex-shrink: 0;
         }
 
@@ -372,17 +394,202 @@
             color: var(--color-primary);
         }
 
+        .linear-stage-content {
+            flex: 1;
+            min-width: 0;
+        }
+
         .linear-stage .stage-name {
-            font-weight: 600;
-            font-size: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .linear-stage .stage-preview {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .linear-stage.active .stage-preview {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .linear-stage .stage-arrow {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .linear-stage.active .stage-arrow {
+            color: white;
+        }
+
+        .linear-stage .stage-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .linear-stage.expanded .stage-arrow {
+            transform: rotate(90deg);
         }
 
         .linear-connector {
             width: 3px;
-            height: 24px;
+            height: 20px;
             background: linear-gradient(to bottom, var(--color-primary), var(--color-border));
-            margin-left: 2.1rem;
+            margin-left: 2.3rem;
             border-radius: 2px;
+        }
+
+        /* Mobile center text */
+        .mobile-center-label {
+            display: none;
+            text-align: center;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 600px) {
+            .mobile-center-label {
+                display: block;
+            }
+
+            /* Hide bottom panel on mobile */
+            #stageDetails {
+                display: none !important;
+            }
+        }
+
+        /* Inline details for mobile accordion */
+        .inline-details {
+            display: none;
+            background: var(--color-surface);
+            border: 2px solid var(--color-primary);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-top: -2px;
+            margin-bottom: 0;
+            animation: slideDown 0.3s ease;
+        }
+
+        .inline-details.visible {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .inline-details .inline-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .inline-details .inline-number {
+            width: 28px;
+            height: 28px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .inline-details .inline-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-primary);
+        }
+
+        .inline-details .inline-desc {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .inline-details .inline-services {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .inline-details .inline-service {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+        }
+
+        .inline-details .inline-service h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .inline-details .inline-service p {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .inline-details .inline-metrics {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-border);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .inline-details .inline-metric {
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .inline-details .inline-metric-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .inline-details .inline-metric-label {
+            font-size: 0.6rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Hide connector after expanded stage */
+        .linear-stage.expanded + .linear-connector {
+            display: none;
+        }
+
+        /* Adjust connector after inline details */
+        .inline-details.visible + .linear-connector {
+            margin-top: 0;
         }
     </style>
 </head>
@@ -446,34 +653,59 @@
 
             <!-- Linear View (mobile) -->
             <div class="lifecycle-linear">
+                <div class="mobile-center-label">Customer Lifecycle</div>
                 <div class="linear-stage" data-stage="1">
                     <span class="number">1</span>
-                    <span class="stage-name">Awareness</span>
+                    <div class="linear-stage-content">
+                        <div class="stage-name">Awareness</div>
+                        <div class="stage-preview">Building brand recognition through targeted outreach</div>
+                    </div>
+                    <span class="stage-arrow">→</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="2">
                     <span class="number">2</span>
-                    <span class="stage-name">Acquisition</span>
+                    <div class="linear-stage-content">
+                        <div class="stage-name">Acquisition</div>
+                        <div class="stage-preview">Streamlined onboarding with intelligent automation</div>
+                    </div>
+                    <span class="stage-arrow">→</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="3">
                     <span class="number">3</span>
-                    <span class="stage-name">Activation</span>
+                    <div class="linear-stage-content">
+                        <div class="stage-name">Activation</div>
+                        <div class="stage-preview">Helping customers quickly realize value</div>
+                    </div>
+                    <span class="stage-arrow">→</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="4">
                     <span class="number">4</span>
-                    <span class="stage-name">Engagement</span>
+                    <div class="linear-stage-content">
+                        <div class="stage-name">Engagement</div>
+                        <div class="stage-preview">Deepening relationships through personalization</div>
+                    </div>
+                    <span class="stage-arrow">→</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="5">
                     <span class="number">5</span>
-                    <span class="stage-name">Retention</span>
+                    <div class="linear-stage-content">
+                        <div class="stage-name">Retention</div>
+                        <div class="stage-preview">Proactively addressing churn risks</div>
+                    </div>
+                    <span class="stage-arrow">→</span>
                 </div>
                 <div class="linear-connector"></div>
                 <div class="linear-stage" data-stage="6">
                     <span class="number">6</span>
-                    <span class="stage-name">Advocacy</span>
+                    <div class="linear-stage-content">
+                        <div class="stage-name">Advocacy</div>
+                        <div class="stage-preview">Transforming customers into brand advocates</div>
+                    </div>
+                    <span class="stage-arrow">→</span>
                 </div>
             </div>
 
@@ -610,54 +842,126 @@
             }
         };
 
-        function showStageDetails(stageNum) {
+        function isMobile() {
+            return window.innerWidth <= 600;
+        }
+
+        function createInlineDetails(stageNum) {
             const data = stageData[stageNum];
-            const details = document.getElementById('stageDetails');
-
-            // Update content
-            document.querySelector('.stage-number').textContent = stageNum;
-            document.getElementById('stageName').textContent = data.name;
-            document.getElementById('stageDescription').textContent = data.description;
-
-            // Update services
-            const servicesGrid = document.getElementById('servicesGrid');
-            servicesGrid.innerHTML = data.services.map(s => `
-                <div class="service-item">
-                    <h4>${s.title}</h4>
-                    <p>${s.desc}</p>
+            const html = `
+                <div class="inline-details visible" id="inline-details-${stageNum}">
+                    <div class="inline-header">
+                        <span class="inline-number">${stageNum}</span>
+                        <span class="inline-title">${data.name}</span>
+                    </div>
+                    <p class="inline-desc">${data.description}</p>
+                    <div class="inline-services">
+                        ${data.services.map(s => `
+                            <div class="inline-service">
+                                <h4>${s.title}</h4>
+                                <p>${s.desc}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="inline-metrics">
+                        ${data.metrics.map(m => `
+                            <div class="inline-metric">
+                                <div class="inline-metric-value">${m.value}</div>
+                                <div class="inline-metric-label">${m.label}</div>
+                            </div>
+                        `).join('')}
+                    </div>
                 </div>
-            `).join('');
+            `;
+            return html;
+        }
 
-            // Update metrics
-            const metricsRow = document.getElementById('metricsRow');
-            metricsRow.innerHTML = data.metrics.map(m => `
-                <div class="metric">
-                    <div class="metric-value">${m.value}</div>
-                    <div class="metric-label">${m.label}</div>
-                </div>
-            `).join('');
-
-            // Show panel
-            details.classList.add('visible');
+        function showStageDetails(stageNum, clickedElement) {
+            const data = stageData[stageNum];
 
             // Update active states
             document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(el => {
                 el.classList.remove('active');
-                if (el.dataset.stage === String(stageNum)) {
-                    el.classList.add('active');
-                }
+                el.classList.remove('expanded');
             });
+
+            // Remove any existing inline details
+            document.querySelectorAll('.inline-details').forEach(el => el.remove());
+
+            if (isMobile() && clickedElement && clickedElement.classList.contains('linear-stage')) {
+                // Mobile accordion behavior
+                clickedElement.classList.add('active');
+                clickedElement.classList.add('expanded');
+
+                // Insert inline details after the clicked stage
+                clickedElement.insertAdjacentHTML('afterend', createInlineDetails(stageNum));
+
+                // Smooth scroll to show the details
+                setTimeout(() => {
+                    clickedElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else {
+                // Desktop behavior - use bottom panel
+                const details = document.getElementById('stageDetails');
+
+                document.querySelector('.stage-number').textContent = stageNum;
+                document.getElementById('stageName').textContent = data.name;
+                document.getElementById('stageDescription').textContent = data.description;
+
+                const servicesGrid = document.getElementById('servicesGrid');
+                servicesGrid.innerHTML = data.services.map(s => `
+                    <div class="service-item">
+                        <h4>${s.title}</h4>
+                        <p>${s.desc}</p>
+                    </div>
+                `).join('');
+
+                const metricsRow = document.getElementById('metricsRow');
+                metricsRow.innerHTML = data.metrics.map(m => `
+                    <div class="metric">
+                        <div class="metric-value">${m.value}</div>
+                        <div class="metric-label">${m.label}</div>
+                    </div>
+                `).join('');
+
+                details.classList.add('visible');
+
+                // Set active on the clicked stage
+                document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(el => {
+                    if (el.dataset.stage === String(stageNum)) {
+                        el.classList.add('active');
+                    }
+                });
+            }
         }
 
         // Event listeners
-        document.querySelectorAll('.lifecycle-stage, .linear-stage').forEach(stage => {
+        document.querySelectorAll('.lifecycle-stage').forEach(stage => {
             stage.addEventListener('click', () => {
-                showStageDetails(parseInt(stage.dataset.stage));
+                showStageDetails(parseInt(stage.dataset.stage), stage);
             });
         });
 
-        // Show first stage by default
-        showStageDetails(1);
+        document.querySelectorAll('.linear-stage').forEach(stage => {
+            stage.addEventListener('click', function() {
+                const stageNum = parseInt(this.dataset.stage);
+                const isAlreadyExpanded = this.classList.contains('expanded');
+
+                if (isAlreadyExpanded) {
+                    // Collapse if clicking same stage
+                    this.classList.remove('active');
+                    this.classList.remove('expanded');
+                    document.querySelectorAll('.inline-details').forEach(el => el.remove());
+                } else {
+                    showStageDetails(stageNum, this);
+                }
+            });
+        });
+
+        // Show first stage by default (only on desktop)
+        if (!isMobile()) {
+            showStageDetails(1, null);
+        }
     </script>
 </body>
 </html>
