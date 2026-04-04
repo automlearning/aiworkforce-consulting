@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Lifecycle Management | Samuel Kambasha</title>
-    <!-- v6 mobile fix -->
-    <link rel="stylesheet" href="css/themes/default.css?v=6" id="theme-css">
-    <link rel="stylesheet" href="css/base.css?v=6">
+    <!-- v7 debug mobile -->
+    <link rel="stylesheet" href="css/themes/default.css?v=7" id="theme-css">
+    <link rel="stylesheet" href="css/base.css?v=7">
     <!-- Critical mobile styles - loaded early with highest priority -->
     <style id="mobile-critical">
-        @media screen and (max-width: 768px) {
-            #lifecycleLinear {
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-            .lifecycle-chart {
-                display: none !important;
-            }
-            .linear-stage {
-                display: flex !important;
-                background: #fff !important;
-                border: 2px solid #e5e7eb !important;
-                border-radius: 16px !important;
-                padding: 1.25rem !important;
-                margin-bottom: 0 !important;
-            }
+        /* DEBUG: Force mobile view on ALL screen sizes temporarily */
+        .lifecycle-chart {
+            display: none !important;
+        }
+        #lifecycleLinear,
+        .lifecycle-linear {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            background: #ff0000 !important;
+            min-height: 200px !important;
+            padding: 20px !important;
+        }
+        .linear-stage {
+            display: flex !important;
+            background: #00ff00 !important;
+            border: 3px solid #000 !important;
+            padding: 1.25rem !important;
+            margin-bottom: 10px !important;
+            color: #000 !important;
+        }
+        .mobile-center-label {
+            display: block !important;
+            background: blue !important;
+            color: white !important;
+            padding: 20px !important;
         }
     </style>
     <style>
@@ -338,64 +347,24 @@
             }
         }
 
-        /* Linear mobile view - HIDDEN by default on desktop */
+        /* DEBUG: Force linear view to always show */
         .lifecycle-linear {
-            display: none;
+            display: block !important;
             max-width: 500px;
             margin: 0 auto;
             padding: 0 1rem;
         }
 
-        /* Desktop: Ensure chart shows and linear hides */
-        @media screen and (min-width: 769px) {
-            .lifecycle-chart {
-                display: block !important;
-            }
-            .lifecycle-linear {
-                display: none !important;
-            }
+        .lifecycle-chart {
+            display: none !important;
         }
 
-        /* Mobile: Show linear view, hide circular chart */
-        @media screen and (max-width: 768px) {
-            .lifecycle-container .lifecycle-chart {
-                display: none !important;
-                visibility: hidden !important;
-                height: 0 !important;
-                overflow: hidden !important;
-            }
+        .instructions {
+            display: none !important;
+        }
 
-            .lifecycle-container .lifecycle-linear {
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                height: auto !important;
-            }
-
-            .instructions {
-                display: none !important;
-            }
-
-            .lifecycle-hero p {
-                font-size: 0.9rem;
-            }
-
-            .stage-details {
-                border-radius: 16px;
-                margin-top: 1.5rem;
-            }
-
-            .stage-details h3 {
-                font-size: 1rem;
-            }
-
-            .mobile-center-label {
-                display: block !important;
-            }
-
-            #stageDetails {
-                display: none !important;
-            }
+        #stageDetails {
+            display: none !important;
         }
 
         .linear-stage {
