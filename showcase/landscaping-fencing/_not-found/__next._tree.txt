@@ -1,0 +1,2 @@
+:HL["/showcase/landscaping-fencing/_next/static/chunks/07n~4iuca5~37.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"uFg5516_nkwd9B_i0-1pv"}

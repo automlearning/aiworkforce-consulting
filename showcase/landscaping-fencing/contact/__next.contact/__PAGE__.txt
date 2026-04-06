@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[47257,["/showcase/landscaping-fencing/_next/static/chunks/0rq84fk54nfid.js","/showcase/landscaping-fencing/_next/static/chunks/0d3shmwh5_nmn.js"],"ClientPageRoot"]
+3:I[69139,["/showcase/landscaping-fencing/_next/static/chunks/0rq84fk54nfid.js","/showcase/landscaping-fencing/_next/static/chunks/0d3shmwh5_nmn.js","/showcase/landscaping-fencing/_next/static/chunks/0yv3ovc8dbo0..js"],"default"]
+6:I[97367,["/showcase/landscaping-fencing/_next/static/chunks/0rq84fk54nfid.js","/showcase/landscaping-fencing/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/showcase/landscaping-fencing/_next/static/chunks/0yv3ovc8dbo0..js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"uFg5516_nkwd9B_i0-1pv"}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
