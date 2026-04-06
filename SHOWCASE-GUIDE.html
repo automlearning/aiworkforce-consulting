@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workforce Showcase - Project Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #111827;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            color: #374151;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h3 {
+            color: #4b5563;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        code {
+            background: #1f2937;
+            color: #10b981;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .highlight {
+            color: #10b981;
+        }
+
+        .comment {
+            color: #6b7280;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .step-number {
+            background: #10b981;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .folder-tree {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .folder {
+            color: #60a5fa;
+        }
+
+        .file {
+            color: #a5b4fc;
+        }
+
+        .important {
+            color: #f87171;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Workforce Showcase Guide</h1>
+    <p class="subtitle">How to manage projects and add new showcases to aiworkforce.consulting</p>
+
+    <!-- OVERVIEW -->
+    <h2>1. Overview</h2>
+
+    <div class="card">
+        <div class="card-title">Live URLs</div>
+        <table>
+            <tr>
+                <th>Site</th>
+                <th>URL</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Main Website</td>
+                <td><a href="https://www.aiworkforce.consulting">www.aiworkforce.consulting</a></td>
+                <td>Landing page & main site</td>
+            </tr>
+            <tr>
+                <td>Showcase Page</td>
+                <td><a href="https://www.aiworkforce.consulting/showcase/">www.aiworkforce.consulting/showcase/</a></td>
+                <td>Portfolio of all projects</td>
+            </tr>
+            <tr>
+                <td>Taurai App</td>
+                <td><a href="https://taurai.aiworkforce.consulting">taurai.aiworkforce.consulting</a></td>
+                <td>Separate subdomain deployment</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- FOLDER STRUCTURE -->
+    <h2>2. Folder Structure</h2>
+
+    <div class="folder-tree">
+<span class="folder">C:\Users\life6\OneDrive\50. Claude Code\</span>
+├── <span class="folder important">01. AiworkforceLandingPage\</span>     <span class="comment"># MAIN DEPLOYMENT REPO</span>
+│   ├── index.html                       <span class="comment"># Main website homepage</span>
+│   ├── netlify.toml                     <span class="comment"># Netlify config</span>
+│   ├── <span class="folder">showcase\</span>
+│   │   ├── <span class="file important">index.html</span>               <span class="comment"># EDIT THIS to add projects</span>
+│   │   ├── showcase.css                 <span class="comment"># Showcase page styles</span>
+│   │   ├── <span class="folder">kendall-healthcare\</span>      <span class="comment"># Static export</span>
+│   │   └── <span class="folder">landscaping-fencing\</span>     <span class="comment"># Static export</span>
+│   └── SHOWCASE-GUIDE.html              <span class="comment"># This file</span>
+│
+├── <span class="folder">04. Comm Skills\</span>                     <span class="comment"># Taurai source code</span>
+│   ├── <span class="folder">frontend\</span>                        <span class="comment"># React + Vite</span>
+│   └── <span class="folder">backend\</span>                         <span class="comment"># Python + FastAPI</span>
+│
+├── <span class="folder">07. Kendall_Website\</span>                 <span class="comment"># Kendall Healthcare source</span>
+│
+└── <span class="folder">09. Landscaping and Fencing Solutions\</span>
+    └── <span class="folder">landscaping-website\</span>             <span class="comment"># Next.js source code</span>
+    </div>
+
+    <div class="info">
+        <strong>Key Point:</strong> The <code>01. AiworkforceLandingPage</code> folder is the one connected to Netlify.
+        All deployments happen from this folder.
+    </div>
+
+    <!-- CURRENT PROJECTS -->
+    <h2>3. Current Projects</h2>
+
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Source Folder</th>
+            <th>Type</th>
+            <th>Deployed To</th>
+        </tr>
+        <tr>
+            <td><strong>Taurai</strong> (formerly LeadSpeak)</td>
+            <td>04. Comm Skills</td>
+            <td>External subdomain</td>
+            <td>taurai.aiworkforce.consulting</td>
+        </tr>
+        <tr>
+            <td><strong>Kendall Healthcare</strong></td>
+            <td>07. Kendall_Website</td>
+            <td>Static in showcase</td>
+            <td>/showcase/kendall-healthcare/</td>
+        </tr>
+        <tr>
+            <td><strong>Landscaping & Fencing</strong></td>
+            <td>09. Landscaping and Fencing</td>
+            <td>Static in showcase</td>
+            <td>/showcase/landscaping-fencing/</td>
+        </tr>
+    </table>
+
+    <!-- HOW TO ADD NEW PROJECT -->
+    <h2>4. Adding a New Static Project (Next.js)</h2>
+
+    <p>For projects built with Next.js that will be hosted under <code>/showcase/PROJECT-NAME/</code></p>
+
+    <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h3>Configure the project for static export</h3>
+            <p>In your project's <code>next.config.ts</code>:</p>
+            <pre><code><span class="highlight">import</span> type { NextConfig } <span class="highlight">from</span> "next";
+
+<span class="highlight">const</span> nextConfig: NextConfig = {
+  <span class="comment">// Set the base path for the showcase subfolder</span>
+  basePath: <span class="highlight">'/showcase/YOUR-PROJECT-NAME'</span>,
+
+  <span class="comment">// Enable static export</span>
+  output: <span class="highlight">'export'</span>,
+
+  <span class="comment">// Trailing slashes for clean URLs</span>
+  trailingSlash: <span class="highlight">true</span>,
+
+  <span class="comment">// Unoptimized images for static export</span>
+  images: {
+    unoptimized: <span class="highlight">true</span>,
+  },
+};
+
+<span class="highlight">export default</span> nextConfig;</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h3>Build the project</h3>
+            <pre><code>cd "C:\Users\life6\OneDrive\50. Claude Code\XX. Your Project\project-folder"
+npm run build</code></pre>
+            <p>This creates an <code>out/</code> folder with the static files.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <h3>Copy build output to showcase folder</h3>
+            <pre><code><span class="comment"># Copy the 'out' folder contents to the showcase</span>
+xcopy /E /I /Y "out" "C:\Users\life6\OneDrive\50. Claude Code\01. AiworkforceLandingPage\showcase\YOUR-PROJECT-NAME"</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+            <h3>Add project card to showcase/index.html</h3>
+            <p>Edit <code>01. AiworkforceLandingPage\showcase\index.html</code> and add a new card in the <code>projects-grid</code>:</p>
+            <pre><code><span class="comment">&lt;!-- Your New Project --&gt;</span>
+&lt;div class="project-card"&gt;
+    &lt;div class="project-image"&gt;
+        &lt;img src="<span class="highlight">https://images.unsplash.com/photo-XXXXX?w=600&h=400&fit=crop</span>"
+             alt="Project Name"&gt;
+    &lt;/div&gt;
+    &lt;div class="project-content"&gt;
+        &lt;span class="project-category"&gt;<span class="highlight">Category</span>&lt;/span&gt;
+        &lt;h3&gt;<span class="highlight">Project Name</span>&lt;/h3&gt;
+        &lt;p&gt;<span class="highlight">Brief description of the project and its features.</span>&lt;/p&gt;
+        &lt;div class="project-tags"&gt;
+            &lt;span&gt;<span class="highlight">Tag1</span>&lt;/span&gt;
+            &lt;span&gt;<span class="highlight">Tag2</span>&lt;/span&gt;
+            &lt;span&gt;<span class="highlight">Tag3</span>&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;a href="<span class="highlight">your-project-name/</span>" class="btn btn-secondary"&gt;View Project&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+            <h3>Commit and deploy</h3>
+            <pre><code>cd "C:\Users\life6\OneDrive\50. Claude Code\01. AiworkforceLandingPage"
+
+<span class="comment"># Stage changes</span>
+git add showcase/
+
+<span class="comment"># Commit</span>
+git commit -m "Add YOUR-PROJECT-NAME to showcase"
+
+<span class="comment"># Push to GitHub</span>
+git push
+
+<span class="comment"># Deploy to Netlify</span>
+netlify deploy --prod</code></pre>
+        </div>
+    </div>
+
+    <div class="success">
+        <strong>Done!</strong> Your project is now live at <code>www.aiworkforce.consulting/showcase/your-project-name/</code>
+    </div>
+
+    <!-- EXTERNAL PROJECT -->
+    <h2>5. Adding an External Project (Separate Subdomain)</h2>
+
+    <p>For projects hosted on their own subdomain (like Taurai at taurai.aiworkforce.consulting)</p>
+
+    <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h3>Deploy the project to its own Netlify site</h3>
+            <p>Create a new Netlify site for the project with its own subdomain.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h3>Add project card with external link</h3>
+            <p>In <code>showcase/index.html</code>, use a full URL and <code>target="_blank"</code>:</p>
+            <pre><code>&lt;a href="<span class="highlight">https://your-project.aiworkforce.consulting</span>"
+   class="btn btn-secondary"
+   <span class="highlight">target="_blank"</span>&gt;View Project&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- QUICK REFERENCE -->
+    <h2>6. Quick Reference Commands</h2>
+
+    <div class="card">
+        <div class="card-title">Common Commands</div>
+        <pre><code><span class="comment"># Navigate to deployment folder</span>
+cd "C:\Users\life6\OneDrive\50. Claude Code\01. AiworkforceLandingPage"
+
+<span class="comment"># Check status</span>
+git status
+
+<span class="comment"># Stage all showcase changes</span>
+git add showcase/
+
+<span class="comment"># Commit with message</span>
+git commit -m "Your commit message"
+
+<span class="comment"># Push to GitHub</span>
+git push
+
+<span class="comment"># Deploy to production</span>
+netlify deploy --prod
+
+<span class="comment"># Preview deploy (not production)</span>
+netlify deploy</code></pre>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <h2>7. Troubleshooting</h2>
+
+    <h3>Push rejected - remote has changes</h3>
+    <pre><code>git stash
+git pull --rebase
+git push
+git stash pop</code></pre>
+
+    <h3>Images not loading in static export</h3>
+    <p>Make sure <code>images.unoptimized: true</code> is set in next.config.ts</p>
+
+    <h3>Links not working after deploy</h3>
+    <p>Check that <code>basePath</code> matches the folder name in showcase/</p>
+
+    <h3>404 on page refresh</h3>
+    <p>Ensure <code>trailingSlash: true</code> is set for proper static file routing</p>
+
+    <!-- NOTES -->
+    <h2>8. Important Notes</h2>
+
+    <div class="warning">
+        <strong>Taurai = LeadSpeak:</strong> These are the same project. "LeadSpeak" was the working title during development.
+        The final deployed product is branded as "Taurai" and lives at taurai.aiworkforce.consulting.
+    </div>
+
+    <ul>
+        <li>Always work from <code>01. AiworkforceLandingPage</code> for deployments</li>
+        <li>Don't edit files in <code>07. Kendall_Website/aiworkforce-deploy</code> - that's an old version</li>
+        <li>Use Unsplash URLs for placeholder images: <code>https://images.unsplash.com/photo-ID?w=600&h=400&fit=crop</code></li>
+        <li>Keep the placeholder "Your Project Here" card at the end of the grid</li>
+    </ul>
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
+    <p style="color: #6b7280; font-size: 0.9rem;">
+        Last updated: April 2026 | AI Workforce Consulting
+    </p>
+</body>
+</html>
